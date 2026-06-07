@@ -1,0 +1,100 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px 8px 80px;
+    background-color: #252424;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    padding-bottom: 0px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: -8px;
+}
+
+.navList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.navLink {
+    display: inline-block;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+    transition:
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+    position: relative;
+}
+
+.navLink:hover,
+.navLink:focus {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px rgba(--accent-color, 0.5);
+}
+
+.navLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.navLink:hover::after,
+.navLink:focus::after {
+    width: 100%;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.ctaBtn {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25),
+                0 0 20px rgba(255, 140, 0, 0.25);
+}
+
+.ctaBtn:hover,
+.ctaBtn:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    background-color: var(--accent-hover);
+} 

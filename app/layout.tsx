@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Merriweather } from "next/font/google";
+import { Asap  } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-const merriweather = Merriweather({ subsets: ["latin"], weight: ["400", "700"] });
+export const asap = Asap({
+  subsets: ["latin"],
+  variable: "--font-main",
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk" className={`${inter.className} ${merriweather.className}`}>
+    <html lang="uk" className={asap.variable}>
       <body>{children}</body>
     </html>
   );

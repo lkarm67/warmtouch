@@ -22,7 +22,7 @@ body {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family);
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.5;
@@ -30,10 +30,18 @@ body {
 
 h1,
 h2,
-h3 {
-  font-family: 'Merriweather', serif;
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
 }
 
+button {
+  font-family: inherit;
+  color: inherit;
+}
 /* Media */
 
 img,
@@ -59,6 +67,7 @@ select {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* Lists */
@@ -66,6 +75,8 @@ a {
 ul,
 ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Buttons */
@@ -78,7 +89,34 @@ button {
 
 :root {
   --bg-color: #2e2d2d;
-  --text-color: #ffffff;
-  --accent-color: #d97706;
+  --text-color: #e4d6bc;
+  --accent-color: #d8682e;
   --accent-hover: #b45309;
+}
+
+:root {
+    --font-family: "Inter", sans-serif;
+}
+
+/* Styles for Mobile devices */
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 0 0 20px;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 0 0 32px;
+  }
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1924px;
+    padding: 0 0 0 80px;
+  }
 }
