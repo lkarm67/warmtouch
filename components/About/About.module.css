@@ -1,0 +1,152 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  min-height: 100vh;
+  background: #e4d6bc;
+}
+
+.imageWrapper {
+  margin: 180px 0;
+}
+
+.aboutImage {
+ 
+  min-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 180px 40px;
+}
+
+.title{
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--bg-color);
+}
+
+.dividerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.divider {
+    width: 150px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.icon_fire{
+    width: 24px;
+    height: 24px;
+    fill: var(--accent-color);
+}
+ 
+.description{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--bg-color);
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.infoList {
+    display: flex;
+    flex-direction: row;
+    gap: 68px;
+    padding: 20px 0;
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.aboutIcon {
+    width: 40px;
+    height: 40px;
+    fill: var(--accent-color);
+}
+
+.infoText {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.infoSubtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.infoLabel {
+    font-size: 16px;
+    color: var(--bg-color);
+}
+
+.infoAdvantages{
+   Display: flex;  
+   flex-direction: column;
+   gap: 12px;
+}
+
+.infoAdvantagesTitle{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--bg-color);
+}
+
+.infoAdvantagesList{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.infoAdvantageItem{
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+}
+
+.infoIcon{
+    width: 32px;
+    height: 32px;
+    fill: var(--accent-color);
+}
+
+.infoAdvantageText{
+    font-size: 18px;
+    color: var(--bg-color);
+}
+
+.infoTrustReasons{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.infoTrustReason{
+    font-family: inherit;
+    font-size: 28px;
+
+}
+
+.qouteIcon{
+    width: 40px;
+    height: 40px;
+    fill: var(--text-color);
+}
