@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Asap  } from "next/font/google";
+import { Inter  } from "next/font/google";
 import "./globals.css";
 
-export const asap = Asap({
+export const inter = Inter({
   subsets: ["latin"],
   variable: "--font-main",
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk" className={asap.variable}>
+    <html lang="uk" className={inter.variable}>
       <body>{children}</body>
     </html>
   );
