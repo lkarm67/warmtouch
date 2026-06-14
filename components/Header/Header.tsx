@@ -40,6 +40,11 @@ export default function Header() {
                     </li>
                     <li className={css.navItem}>
                         <Link href="#" className={css.navLink}>
+                            Часті запитання
+                        </Link>
+                    </li>
+                    <li className={css.navItem}>
+                        <Link href="#" className={css.navLink}>
                             Відгуки
                         </Link>
                     </li>
