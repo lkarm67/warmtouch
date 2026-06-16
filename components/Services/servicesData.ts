@@ -97,7 +97,7 @@ export const servicesData: Service[] = [
   {
     id: 'repair',
     image: '/images/services/fixing.png',
-    imageModal: '/images/services/fixing_1.jpg',
+    imageModal: '/images/projects/fixing_pich.jpg',
     title: 'Ремонт печей',
     shortDescription: 'Ремонт, чистка та реставрація печей.',
     fullDescription:
