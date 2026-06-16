@@ -1,6 +1,12 @@
 import css from './About.module.css';
 import Image from 'next/image';
 import Link from "next/link";
+import { Marck_Script } from 'next/font/google';
+
+const marck = Marck_Script({
+  subsets: ['latin', 'cyrillic'],
+  weight: '400',
+});
 
 export default function About() {
     return (
@@ -114,9 +120,23 @@ export default function About() {
                         </Link>
                     </div>
                     <div className={css.infoTrustReasons}>
+                        
+                        <div className={css.overlay}></div>
+
                         <p className={css.infoTrustReason}>
-                            Кожна піч, камін чи барбекю-комплекс — це місце, де збирається родина, щоб відчути теплий дотик вогню.
-                        </p>    
+                            Піч — це не просто джерело тепла. Це серце дому, що б'ється в унісон із родиною.
+                        </p>  
+
+                        <div className={css.qouteDividerContainer}>
+                            <hr className={css.qouteDivider}/>
+                                <svg className={css.qouteIcon_fire}>
+                                    <use href="/icons.svg#icon-fire"></use>
+                                </svg> 
+                            <hr className={css.qouteDivider}/>
+                        </div> 
+                        
+                        <p className={`${css.infoLogo} ${marck.className}`}>Теплий дотик</p> 
+
                     </div>
                 </div>              
             </div>   

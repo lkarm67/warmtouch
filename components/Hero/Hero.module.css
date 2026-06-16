@@ -4,8 +4,11 @@
   background: #2e2d2d;
 }
 
+.heroTextWrapper {
+  flex: 0 0 55%;
+}
+
 .heroText {
-  flex: 0 0 45%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -97,7 +100,7 @@
   flex: 0 0 55%;
   background-image: url('/images/hero_td.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: right center;
 
   mask-image: linear-gradient(
     to left,

@@ -1,6 +1,7 @@
 .about {
   display: flex;
   flex-direction: column;
+  gap: 60px;
   min-height: 100vh;
   background: #e4d6bc;
   padding: 100px 80px;
@@ -56,6 +57,9 @@
     height: 4px;
     background-color: var(--accent-color);
     border: none;
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.25),
+      0 0 20px rgba(255, 140, 0, 0.25);
 }
 
 .icon_fire{
@@ -117,7 +121,7 @@
    display: flex;  
    flex-direction: column;
    align-items: center;
-   gap: 28px;
+   gap: 40px;
 }
 
 .infoAdvantagesTitle{
@@ -130,7 +134,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    gap: 80px;
 }
 
 .infoBlock{
@@ -156,6 +160,8 @@
     border-radius: 8px;
     padding: 16px;
     min-width: 320px;
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.55);
 }
 
 .infoIcon{
@@ -169,7 +175,7 @@
     color: var(--bg-color);
 }
 
-.infoTrustReasons{
+/*.infoTrustReasons{
     position: relative;
     flex: 0 0 32%;
     display: flex;
@@ -181,36 +187,101 @@
     padding: 28px ;
     border-radius: 8px;
 
+}*/
+
+.infoTrustReasons {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    min-width: 320px;
+    padding: 32px 80px;
+
+    border-radius: 12px;
+
+    background-image: url('/images/fire-quote-bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.55);
 }
 
-.infoTrustReason{
-    position: relative;
-    font-size: 24px;
-    line-height: 1.7;
-    font-style: italic;
-    padding-left: 40px;
+.overlay {
+    position: absolute;
+    inset: 0;
 
+    background: rgba(59, 52, 42, 0.15);
+    backdrop-filter: blur(3px);
+
+    z-index: 1;
+}
+
+.infoTrustReason,
+.qouteDividerContainer,
+.infoLogo {
+    position: relative;
+    z-index: 2;
+}
+
+.infoTrustReason {
+    max-width: 300px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--text-color);
 }
 
 .infoTrustReason::before {
     content: "❝";
     position: absolute;
 
-    left: 0;
-    top: -18px;
+    left: -18px;
+    top: -8px;
 
-    font-size: 56px;
+    font-size: 36px;
     line-height: 1;
-    color: var(--accent-color);
+    color: var(--text-color);
 }
 
 .infoTrustReason::after {
     content: "❞";
-    color: var(--accent-color);
-    font-size: 56px;
+    color: var(--text-color);
+    font-size: 36px;
     line-height: 0;
-    margin-left: 8px;
-    vertical-align: -12px;
+    margin-left: 14px;
+    vertical-align: -6px;
+}
+
+.qouteDividerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.qouteDivider {
+    width: 50px;
+    height: 1px;
+    background-color: var(--text-color);
+    border: none;
+}
+
+.qouteIcon_fire {
+    width: 12px;
+    height: 12px;
+    fill: var(--text-color);
+}
+
+.infoLogo {
+    font-family: 'Marck Script', cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 
 .ctaBtn {
@@ -226,8 +297,8 @@
         box-shadow 0.25s ease,
         background-color 0.25s ease,
         border-color 0.25s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25),
-                0 0 20px rgba(255, 140, 0, 0.25);
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.55);
 }
 
 .ctaBtn:hover,
