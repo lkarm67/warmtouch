@@ -72,8 +72,8 @@ export default function Services() {
             <Image
               src={activeService.imageModal ?? activeService.image}
               alt={activeService.title}
-              width={200}
-              height={100}
+              width={776}
+              height={908}
               className={css.modalImage}
             />
  
@@ -119,79 +119,3 @@ export default function Services() {
 
 
 
-{/*import css from './Services.module.css';
-import Image from 'next/image';
-
-export const Services = () => {
-    return (
-        <section className={css.services + ' container'}>
-            <h2 className={css.title}>Послуги</h2>
-            <div className={css.dividerContainer}>
-                <hr className={css.divider}/>
-                    <svg className={css.icon_fire}>
-                        <use href="/icons.svg#icon-fire"></use>
-                    </svg> 
-                <hr className={css.divider}/>
-            </div>
-            <div className={css.servicesList}>
-                <div className={css.serviceItem}>
-                    <Image
-                        src="/images/services/service1.jpg"
-                        alt="Печі, груби під ключ"
-                        width={400}
-                        height={300}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
-                        className={css.serviceImage}
-                    />
-                    <h3 className={css.serviceTitle}>Печі, груби під ключ</h3>
-                    <p className={css.serviceDescription}>
-                        Будівництво опалювальних печей та груб будь-якої складності.
-                    </p>
-                </div>
-                <div className={css.serviceItem}>
-                    <Image
-                        src="/images/services/service1.jpg"
-                        alt="Каміни"
-                        width={400}
-                        height={300}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
-                        className={css.serviceImage}
-                    />
-                    <h3 className={css.serviceTitle}>Каміни</h3>
-                    <p className={css.serviceDescription}>
-                        Будівництво камінів для будинків та дач.
-                    </p>
-                </div>
-                <div className={css.serviceItem}>
-                    <Image
-                        src="/images/services/service1.jpg"
-                        alt="Барбекю"
-                        width={400}
-                        height={300}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
-                        className={css.serviceImage}
-                    />
-                    <h3 className={css.serviceTitle}>Барбекю</h3>
-                    <p className={css.serviceDescription}>
-                        Будівництво барбекю-комплексів, мангалів та тандирів.
-                    </p>
-                </div>
-                <div className={css.serviceItem}>
-                    <Image
-                        src="/images/services/service1.jpg"
-                        alt="Ремонт печей"
-                        width={400}
-                        height={300}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
-                        className={css.serviceImage}
-                    />
-                    <h3 className={css.serviceTitle}>Ремонт печей</h3>
-                    <p className={css.serviceDescription}>
-                        Ремонт, чистка та реставрація печей.
-                    </p>
-                </div>
-            </div>
-        </section>
-    );
-};
-*/}

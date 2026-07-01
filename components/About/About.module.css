@@ -17,6 +17,8 @@
 .imageWrapper{
     flex-shrink: 0;
     width: 400px;
+    aspect-ratio: 4 / 5;
+    position: relative;
     border-radius: 12px;
     overflow: hidden;
     box-shadow:

@@ -16,9 +16,8 @@ export default function About() {
                     <Image 
                         src="/images/about_td.jpeg" 
                         alt="Григорій Коротя" 
-                        width={400}
-                        height={500}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw" 
+                        fill
+                        sizes="(max-width: 768px) 100vw, 400px"
                         className={css.aboutImage} 
                     />
                 </div>
