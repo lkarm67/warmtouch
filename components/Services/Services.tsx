@@ -29,8 +29,8 @@ export default function Services() {
             <Image
               src={service.image}
               alt={service.title}
-              width={150}
-              height={200}
+              width={776}
+              height={908}
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
               className={css.serviceImage}
             />
