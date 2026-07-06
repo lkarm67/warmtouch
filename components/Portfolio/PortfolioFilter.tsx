@@ -1,3 +1,5 @@
+import { works } from "./portfolioData";
+
 interface Props {
     activeCategory: string;
     setActiveCategory: (category: string) => void;
@@ -5,11 +7,8 @@ interface Props {
 
 export default function PortfolioFilter({ activeCategory, setActiveCategory }: Props) {
     const categories = [
-        'Усі', 
-        'Печі', 
-        'Кахельні', 
-        'Каміни', 
-        'Барбекю'
+        'Усі',
+        ...new Set(works.map(work => work.category))
     ];
 
     return (

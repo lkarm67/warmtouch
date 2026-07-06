@@ -1,9 +1,32 @@
-export default function PortfolioCard({ title, description, image }: { title: string; description: string; image: string }) {
+import { Work } from './portfolioData';
+import Image from 'next/image';
+import css from './PortfolioCard.module.css';
+
+interface Props {
+    work: Work;
+}
+
+export default function PortfolioCard({ work }: Props) {
     return (
-        <div className="card">
-            <img src={image} alt={title} />
-            <h3>{title}</h3>
-            <p>{description}</p>
-        </div>
+        <article className={css.card}>
+            <Image
+                src={work.cover}
+                alt={work.title}
+                fill
+                sizes="(max-width: 768px) 100vw,
+                       (max-width: 1200px) 50vw,
+                       33vw"
+                className={css.image}
+            />
+
+            <div className={css.overlay}>
+                <div className={css.content}>
+                    <h3>{work.title}</h3>
+                    <p>{work.subtitle}</p>
+                </div>
+
+                <span className={css.arrow}>→</span>
+            </div>
+        </article>
     );
 }

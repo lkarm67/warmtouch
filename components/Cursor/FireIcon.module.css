@@ -1,0 +1,17 @@
+.fire{
+    width:100%;
+    height:100%;
+    overflow:visible;
+}
+
+.outer{
+    transform-origin:center bottom;
+}
+
+.middle{
+    transform-origin:center bottom;
+}
+
+.core{
+    transform-origin:center bottom;
+}

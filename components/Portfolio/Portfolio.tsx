@@ -25,7 +25,7 @@ const filteredWorks =
                     </svg>
                 <hr className={css.divider}/>
             </div>  
-            <p className={css.description}>Від невеликого каміна до великої кахельної печі
+            <p className={css.description}>Від невеликого каміна до великої барбекю-зони 
                  — кожен проєкт створюється індивідуально, з увагою до деталей, безпеки 
                  та довговічності.
             </p>
@@ -42,10 +42,10 @@ const filteredWorks =
             <div className={css.grid}>
                 {filteredWorks.map(work => (
                     <PortfolioCard
-                        key={work.id}
+                        key={work.id} 
                         work={work}
-        />
-      ))}
+                    />
+                ))}
             </div>
 
         </section>
