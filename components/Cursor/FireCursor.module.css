@@ -1,34 +1,47 @@
-.cursor {
-    position: fixed;
-
-    left: 0;
-    top: 0;
-
-    pointer-events: none;
-
-    z-index: 999999;
-
-    font-size: 30px;
-
-    transform: translate(-100px,-100px);
-
-    user-select: none;
-
-    will-change: transform;
-}
-
 .cursor{
-    position: fixed;
 
-    width: 22px;
-    height: 28px;
+    position:fixed;
 
     left:0;
+
     top:0;
 
     pointer-events:none;
 
+    user-select:none;
+
     z-index:999999;
 
     will-change:transform;
+
 }
+
+.main{
+
+    opacity:1;
+
+}
+
+.trail1{
+
+    opacity:.22;
+
+    filter:blur(2px);
+
+}
+
+.trail2{
+
+    opacity:.07;
+
+    filter:blur(5px);
+
+}
+
+.sparkLayer{
+
+    z-index:999998;
+
+}
+
+
