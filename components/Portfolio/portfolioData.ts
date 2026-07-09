@@ -27,10 +27,10 @@ export const works: Work[] = [
   {
     id: 3,
     title: 'Кутовий камін',
-    subtitle: 'Облицювання натуральним каменем',
+    subtitle: 'Облицювання цеглою',
     category: 'Каміни',
-    cover: '/portfolio/kamin-01.jpg',
-    images: ['/portfolio/kamin-01.jpg'],
+    cover: '/images/portfolio/kamin/kamin_6.jpg',
+    images: ['/images/portfolio/kamin/kamin_6.jpg'],
   },
   {
     id: 4,
@@ -40,4 +40,16 @@ export const works: Work[] = [
     cover: '/portfolio/barbecue-01.jpg',
     images: ['/portfolio/barbecue-01.jpg'],
   },
+  {
+    id: 5,
+    title: 'Кутовий камін',
+    subtitle: 'Облицювання ручної роботи',
+    category: 'Каміни',
+    cover: '/images/portfolio/kamin/kamin_1.5.jpg',
+    images: [
+      '/images/portfolio/kamin/kamin_1.5.jpg',
+      '/images/portfolio/kamin/kamin_1.1.jpg',      
+    ],
+  }
+
 ];
