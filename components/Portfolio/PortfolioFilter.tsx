@@ -1,4 +1,5 @@
 import { works } from "./portfolioData";
+import css from "./Portfolio.module.css";
 
 interface Props {
     activeCategory: string;
@@ -12,11 +13,15 @@ export default function PortfolioFilter({ activeCategory, setActiveCategory }: P
     ];
 
     return (
-        <div className="filter">
+        <div className={css.filter}>
             {categories.map(category => (
                 <button
                     key={category}
-                    className={activeCategory === category ? 'active' : ''}
+                    className={
+                        activeCategory === category
+                            ? `${css.button} ${css.active}`
+                            : css.button
+                 }
                     onClick={() => setActiveCategory(category)}
                 >
                     {category}

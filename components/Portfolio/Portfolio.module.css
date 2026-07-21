@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 24px;
   min-height: 100vh;
   padding: 100px 80px;
   background-color: var(--bg-color);
@@ -12,7 +13,6 @@
   font-size: 36px;
   font-weight: 700;
   color: var(--text-color);
-  margin-bottom: 24px;
 }
 
 .dividerContainer{
@@ -39,33 +39,88 @@
     fill: var(--accent-color);
 }
 
+.description {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+    max-width: 800px;
+}
+
 .filter {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 14px;
-    margin-bottom: 50px;
+    margin-bottom: 24px;
 }
 
 .button {
-    padding: 12px 28px;
+    padding: 6px 24px;
     border: 1px solid #5f4635;
-    border-radius: 40px;
+    border-radius: 8px;
     background: transparent;
-    color: #2f2f2f;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    transition: .3s;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25),
+                0 0 20px rgba(255, 140, 0, 0.25);
 }
 
-.button:hover {
-    background: #ece7df;
+.button:hover,
+.button:focus {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 .active {
-    background: #b55422;
-    border-color: #b55422;
-    color: white;
-    box-shadow: 0 0 15px rgba(181,84,34,.35);
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--text-color);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(255, 140, 0, 0.25);
+}
+
+.active:hover,
+.active:focus {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: var(--text-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }

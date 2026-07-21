@@ -10,19 +10,24 @@ export interface Work {
 export const works: Work[] = [
   {
     id: 1,
-    title: 'Піч',
-    subtitle: 'Облицювання ручної роботи',
+    title: 'Цегляна груба',
+    subtitle: 'Міжкімнатна груба з плитою',
     category: 'Печі',
-    cover: '/portfolio/pich-01.jpg',
-    images: ['/portfolio/pich-01.jpg'],
+    cover: '/images/portfolio/pich/gruba_plita_3.jpg',
+    images: [
+      '/images/portfolio/pich/gruba_plita_3.jpg'
+    ],
   },
   {
     id: 2,
-    title: 'Кахельна піч із лежанкою',
+    title: 'Кахельна груба із плитою',
     subtitle: 'Облицювання ручної роботи',
     category: 'Кахельні',
-    cover: '/portfolio/kachelna-01.jpg',
-    images: ['/portfolio/kachelna-01.jpg'],
+    cover: '/images/portfolio/kahelna/kahelna_pich_1a.jpg',
+    images: [
+      '/images/portfolio/kahelna/kahelna_pich_1a.jpg',
+      '/images/portfolio/kahelna/kahelna_pich_1b.jpg',
+    ],
   },
   {
     id: 3,
@@ -35,20 +40,20 @@ export const works: Work[] = [
   {
     id: 4,
     title: 'Барбекю-комплекс',
-    subtitle: 'Піч, плита, мийка та стільниця',
+    subtitle: 'Піч, плита, мийка, коптильня та стільниці',
     category: 'Барбекю',
-    cover: '/portfolio/barbecue-01.jpg',
-    images: ['/portfolio/barbecue-01.jpg'],
+    cover: '/images/portfolio/barbecue/barbecue_8.jpg',
+    images: ['/images/portfolio/barbecue/barbecue_8.jpg'],
   },
   {
     id: 5,
     title: 'Кутовий камін',
     subtitle: 'Облицювання ручної роботи',
     category: 'Каміни',
-    cover: '/images/portfolio/kamin/kamin_1.5.jpg',
+    cover: '/images/portfolio/kamin/kamin_1a.jpg',
     images: [
-      '/images/portfolio/kamin/kamin_1.5.jpg',
-      '/images/portfolio/kamin/kamin_1.1.jpg',      
+      '/images/portfolio/kamin/kamin_1a.jpg',
+      '/images/portfolio/kamin/kamin_1b.jpg',      
     ],
   }
 

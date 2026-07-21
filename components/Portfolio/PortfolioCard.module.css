@@ -1,6 +1,6 @@
 .card {
     position: relative;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 4;
 
     overflow: hidden;
     border-radius: 20px;
@@ -42,6 +42,8 @@
 }
 
 .content {
+    flex:1;
+    padding-right:20px;
     transform: translateY(10px);
     transition: transform .35s ease;
 }
@@ -52,18 +54,17 @@
 
 .content h3 {
     margin: 0;
-
     font-size: 1.45rem;
     font-weight: 600;
+    min-height: 3.2rem;
     line-height: 1.2;
 }
 
 .content p {
     margin-top: 8px;
-
     color: rgba(255,255,255,.85);
-
     font-size: .95rem;
+    min-height: 3rem;
     line-height: 1.5;
 }
 
@@ -71,15 +72,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-shrink: 0;
     width: 42px;
     height: 42px;
-
     border-radius: 50%;
-
     background: rgba(255,255,255,.15);
     backdrop-filter: blur(8px);
-
     font-size: 1.4rem;
 
     transition:
