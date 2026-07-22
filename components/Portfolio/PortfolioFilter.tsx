@@ -9,7 +9,9 @@ interface Props {
 export default function PortfolioFilter({ activeCategory, setActiveCategory }: Props) {
     const categories = [
         'Усі',
-        ...new Set(works.map(work => work.category))
+        ...new Set(
+            works.flatMap(work => work.categories)
+        )
     ];
 
     return (

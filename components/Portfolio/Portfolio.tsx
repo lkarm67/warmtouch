@@ -12,7 +12,9 @@ export default function Portfolio () {
 const filteredWorks =
   activeCategory === 'Усі'
     ? works
-    : works.filter(work => work.category === activeCategory);
+    : works.filter(work =>
+        work.categories.includes(activeCategory)
+    );
 
  
     return(
@@ -30,7 +32,7 @@ const filteredWorks =
                  та довговічності.
             </p>
 
-             {/* Тут буде фільтр */}
+             {/* Фільтр */}
             <div className={css.filter}>
                 <PortfolioFilter
                     activeCategory={activeCategory}
@@ -38,7 +40,7 @@ const filteredWorks =
     />
             </div>
 
-            {/* Тут буде галерея */}
+            {/* Галерея */}
             <div className={css.grid}>
                 {filteredWorks.map(work => (
                     <PortfolioCard
