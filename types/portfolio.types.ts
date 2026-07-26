@@ -22,7 +22,10 @@ export interface Contribution {
 }
 
 export interface Specification {
-  heatedArea?: number;  // 40–60
+  heatedArea?: {
+  min: number;
+  max: number;
+};  // 40–60
   chimney?: string;      // Цегляний
   durationDays?: number;     // 14
   completedYear?: number;  // 2024

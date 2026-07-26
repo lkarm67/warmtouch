@@ -216,7 +216,10 @@ export const works: Work[] = [
   // ----------------------------------------------------
 
   specifications: {
-    heatedArea: 15,
+    heatedArea: {
+      min: 15,
+      max: 15
+    },
     chimney: 'Цегляний',
     durationDays: 9,
     completedYear: 2025,
@@ -348,7 +351,11 @@ export const works: Work[] = [
   // ----------------------------------------------------
 
   specifications: {
-    heatedArea: 15,
+    heatedArea: 
+     {
+      min: 15,
+      max: 15
+     },
     chimney: 'Цегляний',
     durationDays: 7,
     completedYear: 2013,
@@ -636,7 +643,10 @@ export const works: Work[] = [
   // ----------------------------------------------------
 
   specifications: {
-    heatedArea: 20-30,
+    heatedArea: {
+      min: 20,
+      max: 30
+    },
     chimney: 'Цегляний + труба з нержавіючої сталі',
     durationDays: 7,
     completedYear: 2019,
