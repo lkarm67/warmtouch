@@ -42,6 +42,14 @@ export const FEATURES = [
     id: 'interroom',
     name: 'Міжкімнатна',
   },
+{
+  id: "air-heating",
+  label: "Повітряний обігрів",
+},
+{
+  id: "multiroom-heating",
+  label: "Опалення кількох кімнат",
+},
   {
     id: 'cooktop',
     name: 'Варильна плита',
@@ -172,6 +180,10 @@ export const MATERIALS = [
   {
     id: 'hyper-pressed-brick',
     name: 'Гіперпресована цегла',
+  },
+  {
+    id: 'facing-brick',
+    name: 'Облицювальна цегла',
   },
   {
     id: 'tiles',
