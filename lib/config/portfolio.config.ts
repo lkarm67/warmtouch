@@ -42,14 +42,14 @@ export const FEATURES = [
     id: 'interroom',
     name: 'Міжкімнатна',
   },
-{
-  id: "air-heating",
-  label: "Повітряний обігрів",
-},
-{
-  id: "multiroom-heating",
-  label: "Опалення кількох кімнат",
-},
+  {
+    id: "air-heating",
+    label: "Повітряний обігрів",
+  },
+  {
+    id: "multiroom-heating",
+    label: "Опалення кількох кімнат",
+  },
   {
     id: 'cooktop',
     name: 'Варильна плита',
@@ -114,6 +114,14 @@ export const FEATURES = [
     id: 'closed-firebox',
     name: 'Закрита топка',
   },
+  {
+    id: 'masonryy-firebox',
+    name: 'Цегляна топка',
+  },
+  {
+    id: 'glass-door',
+    name: 'Скляні дверцята',
+  }
 ] as const;
 
 // ----------------------------------------------------
