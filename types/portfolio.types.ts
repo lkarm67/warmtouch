@@ -51,19 +51,18 @@ export interface Work {
   title: string;
   subtitle?: string;
 
-  cover: string;
   images: Image[];
 
   // ----------------------------------------------------
   // Класифікація
   // ----------------------------------------------------
 
-  categories: string[];   // id з CATEGORIES
-  features?: string[];    // id з FEATURES
-  capabilities?: string[];  // id з CAPABILITIES
-  materials?: string[];   // id з MATERIALS
-  fuels?: string[];       // id з FUELS
-  purposes?: string[];    // id з PURPOSES
+  categories: string[];
+  features: string[];
+  capabilities: string[];
+  materials: string[];
+  fuels: string[];
+  purposes: string[];
 
   // ----------------------------------------------------
   // Опис
@@ -108,6 +107,6 @@ export interface Work {
   // Системні поля
   // ----------------------------------------------------
 
-  featured?: boolean;      // Показувати серед рекомендованих
-  isPublished?: boolean;   // Опубліковано на сайті
+  featured?: boolean;
+  isPublished?: boolean;
 }

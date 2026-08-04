@@ -44,11 +44,11 @@ export const FEATURES = [
   },
   {
     id: "air-heating",
-    label: "Повітряний обігрів",
+    name: "Повітряний обігрів",
   },
   {
     id: "multiroom-heating",
-    label: "Опалення кількох кімнат",
+    name: "Опалення кількох кімнат",
   },
   {
     id: 'cooktop',
@@ -115,7 +115,7 @@ export const FEATURES = [
     name: 'Закрита топка',
   },
   {
-    id: 'masonryy-firebox',
+    id: 'masonry-firebox',
     name: 'Цегляна топка',
   },
   {

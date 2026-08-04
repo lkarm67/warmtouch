@@ -21,8 +21,6 @@ export const works: Work[] = [
   title: 'Міжкімнатна груба з варильною плитою',
   subtitle: 'Опалення двох кімнат і приготування їжі',
 
-  cover: '/images/portfolio/pich/gruba_plita_3.jpg',
-
   images: [
     {
       src: '/images/portfolio/pich/gruba_plita_3.jpg',
@@ -150,8 +148,6 @@ export const works: Work[] = [
 
   title: 'Кахельна груба з варильною плитою',
   subtitle: 'Опалення двох кімнат і приготування їжі',
-
-  cover: '/images/portfolio/kahelna/kahelna_pich_1a.jpg',
 
   images: [
     {
@@ -296,8 +292,6 @@ export const works: Work[] = [
   title: 'Кутовий камін',
   subtitle: 'Класичний кутовий камін із цегляним облицюванням',
 
-  cover: '/images/portfolio/kamin/kamin_6.jpg',
-
   images: [
     {
       src: '/images/portfolio/kamin/kamin_6.jpg',
@@ -432,8 +426,6 @@ export const works: Work[] = [
   title: 'Барбекю-комплекс',
 
   subtitle: 'Барбекю, піч, варильна плита, мийка та робочі поверхні',
-
-  cover: '/images/portfolio/barbecue/barbecue_8.jpg',
 
   images: [
     {
@@ -582,8 +574,6 @@ export const works: Work[] = [
   title: 'Кутовий камін із закритою топкою',
   subtitle: 'Повний цикл пічних робіт під декоративне облицювання',
 
-  cover: '/images/portfolio/kamin/kamin_1a.jpg',
-
   images: [
     {
       src: '/images/portfolio/kamin/kamin_1a.jpg',
@@ -725,8 +715,6 @@ export const works: Work[] = [
 
   title: 'Барбекю-комплекс',
   subtitle: 'Повноцінна літня кухня із мангалом, варильною плитою, коптильнею та мийкою',
-
-  cover: '/images/portfolio/barbecue/barbecue_3.jpg',
 
   images: [
     {
@@ -875,8 +863,6 @@ export const works: Work[] = [
   title: 'Міжкімнатна груба з варильною плитою',
   subtitle: 'Опалювально-варильна груба з повітряним обігрівом кількох кімнат',
 
-  cover: '/images/portfolio/pich/gruba_plita_1a.jpg',
-
   images: [
     {
       src: '/images/portfolio/pich/gruba_plita_1a.jpg',
@@ -1022,8 +1008,6 @@ export const works: Work[] = [
 
   title: 'Кахельна опалювальна груба',
   subtitle: 'Кахельна теплоакумулююча груба з повітряним обігрівом ванної кімнати',
-
-  cover: '/images/portfolio/kahelna/kahelna_gruba_2a.jpg',
 
   images: [
     {
@@ -1184,8 +1168,6 @@ export const works: Work[] = [
   title: 'Реконструкція печі з варильною плитою',
   subtitle: 'Перекладка печі-плити з декоративним облицюванням без перебудови димоходу',
 
-  cover: '/images/portfolio/pich/plita_1.jpg',
-
   images: [
     {
       src: '/images/portfolio/pich/plita_1.jpg',
@@ -1326,8 +1308,6 @@ export const works: Work[] = [
 
   title: 'Барбекю-комплекс',
   subtitle: 'Мангал, варильна плита та мийка в єдиному комплексі',
-
-  cover: '/images/portfolio/barbecue/barbecue_1.jpg',
 
   images: [
     {
@@ -1475,8 +1455,6 @@ export const works: Work[] = [
   title: 'Камін із закритою топкою',
   subtitle: 'Будівництво каміна та димоходу під декоративне облицювання',
 
-  cover: '/images/portfolio/kamin/kamin_2a.jpg',
-
   images: [
     {
       src: '/images/portfolio/kamin/kamin_2a.jpg',
@@ -1619,8 +1597,6 @@ export const works: Work[] = [
   title: 'Барбекю-комплекс',
   subtitle: 'Мангал, коптильня та мийка в одному комплексі',
 
-  cover: '/images/portfolio/barbecue/barbecue_2.jpg',
-
   images: [
     {
       src: '/images/portfolio/barbecue/barbecue_2.jpg',
@@ -1757,8 +1733,6 @@ export const works: Work[] = [
 
   title: 'Кутовий камін',
   subtitle: 'Монтаж камінної топки та підготовка під мармурове облицювання',
-
-  cover: '/images/portfolio/kamin/kamin_4a.jpg',
 
   images: [
     {
@@ -1900,8 +1874,6 @@ export const works: Work[] = [
 
   title: 'Міжкімнатна груба з плитою та духовкою',
   subtitle: 'Опалення двох приміщень із підключенням до існуючого димоходу',
-
-  cover: '/images/portfolio/pich/gruba_plita_duhovka.jpg',
 
   images: [
     {
@@ -2049,8 +2021,6 @@ export const works: Work[] = [
   title: 'Барбекю-комплекс',
   subtitle: 'Мангал, варильна плита, коптильня та мийка в єдиному комплексі',
 
-  cover: '/images/portfolio/barbecue/barbecue_4.jpg',
-
   images: [
     {
       src: '/images/portfolio/barbecue/barbecue_4.jpg',
@@ -2194,8 +2164,6 @@ export const works: Work[] = [
 
   title: 'Кутова опалювально-варильна груба',
   subtitle: 'Теплоакумулююча груба з варильною плитою',
-
-  cover: '/images/portfolio/pich/plita_2.jpg',
 
   images: [
     {
@@ -2341,8 +2309,6 @@ export const works: Work[] = [
   title: 'Відкритий цегляний камін',
   subtitle: 'Камін на місці старої груби з підключенням до існуючого димоходу',
 
-  cover: '/images/portfolio/kamin/kamin_5.jpg',
-
   images: [
     {
       src: '/images/portfolio/kamin/kamin_5.jpg',
@@ -2481,8 +2447,6 @@ export const works: Work[] = [
 
   title: 'Барбекю-комплекс',
   subtitle: 'Барбекю, ніша під металевий гриль та мийка',
-
-  cover: '/images/portfolio/barbecue/barbecue_5a.jpg',
 
   images: [
     {
@@ -2628,8 +2592,6 @@ export const works: Work[] = [
   title: 'Міжкімнатна опалювально-варильна груба',
   subtitle: 'Груба з двоконфорковою варильною плитою',
 
-  cover: '/images/portfolio/pich/gruba_plita_2.jpg',
-
   images: [
     {
       src: '/images/portfolio/pich/gruba_plita_2.jpg',
@@ -2766,8 +2728,6 @@ export const works: Work[] = [
   title: 'Барбекю-комплекс',
   subtitle: 'Барбекю з мийкою та просторими робочими поверхнями',
 
-  cover: '/images/portfolio/barbecue/barbecue_6.jpg',
-
   images: [
     {
       src: '/images/portfolio/barbecue/barbecue_6.jpg',
@@ -2899,8 +2859,6 @@ export const works: Work[] = [
 
   title: 'Міжкімнатна груба',
   subtitle: 'Опалювально-варильна груба для обігріву двох приміщень',
-
-  cover: '/images/portfolio/pich/gruba_plita_4a.jpg',
 
   images: [
     {
@@ -3044,8 +3002,6 @@ export const works: Work[] = [
   title: 'Барбекю-комплекс',
   subtitle: 'Барбекю з хлібною камерою, коптильнею та мийкою',
 
-  cover: '/images/portfolio/barbecue/barbecue_7.jpg',
-
   images: [
     {
       src: '/images/portfolio/barbecue/barbecue_7.jpg',
@@ -3187,8 +3143,6 @@ export const works: Work[] = [
 
   title: 'Піч-камін',
   subtitle: 'Теплоакумулююча піч-камін із цегляною топкою',
-
-  cover: '/images/portfolio/pich/pich_kamin.jpg',
 
   images: [
     {

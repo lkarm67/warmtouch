@@ -1,0 +1,166 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 1200px;
+  max-height: 95vh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #fff;
+  border-radius: 16px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+}
+
+.close {
+  position: fixed;
+
+  top: 16px;
+  right: 16px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(46, 45, 45, 0.9);
+  color: #e4d6bc;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.close:hover {
+  background: #d8682e;
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.left {
+  padding: 16px 16px 0;
+
+  flex-shrink: 0;
+}
+
+.content {
+  padding: 20px;
+  overflow-y: auto;
+   max-height: 90vh;
+  min-height: 0;
+}
+
+.content h2 {
+  margin-bottom: 10px;
+
+  font-size: 1.6rem;
+  line-height: 1.2;
+
+  color: #2f2f2f;
+}
+
+.subtitle {
+  margin-bottom: 18px;
+
+  color: #777;
+
+  font-size: 1rem;
+}
+
+.description {
+  color: #444;
+
+  line-height: 1.7;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (min-width: 768px) {
+
+  .backdrop {
+    padding: 24px;
+  }
+
+  .modal {
+    width: min(92vw, 900px);
+
+    border-radius: 20px;
+  }
+
+  .left {
+    padding: 24px 24px 0;
+  }
+
+  .content {
+    padding: 28px;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+  }
+
+}
+
+/* ===========================
+   Desktop
+=========================== */
+
+@media (min-width: 1024px) {
+
+  .modal {
+    width: min(1200px, 95vw);
+
+    display: grid;
+    grid-template-columns: minmax(320px, 480px) 1fr;
+
+    align-items: start;
+  }
+
+  .left {
+    padding: 24px;
+  }
+
+  .content {
+    height: 95vh;
+
+    padding: 32px;
+
+    overflow-y: auto;
+  }
+}
