@@ -11,51 +11,56 @@ import {
 
 export const works: Work[] = [
   {
-  id: 1,
-  slug: 'mizhkimnatna-gruba-z-varylnoiu-plytoiu',
+    id: 1,
+    slug: 'mizhkimnatna-gruba-z-varylnoiu-plytoiu',
 
   // ----------------------------------------------------
   // Основна інформація
   // ----------------------------------------------------
 
-  title: 'Міжкімнатна груба з варильною плитою',
-  subtitle: 'Опалення двох кімнат і приготування їжі',
+    title: 'Міжкімнатна груба з варильною плитою',
+    subtitle: 'Опалення двох кімнат і приготування їжі',
 
-  images: [
-    {
-      src: '/images/portfolio/pich/gruba_plita_3.jpg',
-      alt: 'Міжкімнатна цегляна груба з чавунною варильною плитою',
-      caption: 'Міжкімнатна теплоакумулююча груба з варильною плитою.',
-    },
-  ],
+    images: [
+      {
+        src: '/images/portfolio/pich/gruba_plita_3.jpg',
+        alt: 'Міжкімнатна цегляна груба з чавунною варильною плитою',
+        caption: 'Міжкімнатна теплоакумулююча груба з варильною плитою.',
+      },
+    ],
 
   // ----------------------------------------------------
   // Класифікація
   // ----------------------------------------------------
 
-  categories: [
-    'pechi',
-    'gruby',
-  ],
+    categories: [
+      'pechi',
+      'gruby',
+    ],
 
-  features: [
-    'interroom',
-    'cooktop',
-    'heat-storage',
-  ],
+    features: [
+      'interroom',
+      'cooktop',
+      'heat-storage',
+    ],
 
-  materials: [
-    'brick',
-    'cast-iron',
-  ],
+    capabilities: [
+      'heating',
+      'cooking',
+    ],
 
-  fuels: [
-    'wood',
-  ],
+    materials: [
+      'brick',
+      'cast-iron',
+    ],
 
-  purposes: [
-    'heating-cooking',
-  ],
+    fuels: [
+      'wood',
+    ],
+
+    purposes: [
+      'heating-cooking',
+    ],
 
   // ----------------------------------------------------
   // Опис
@@ -74,7 +79,16 @@ export const works: Work[] = [
   // Технічні характеристики
   // ----------------------------------------------------
 
-  specifications: {},
+  specifications: {
+    heatedArea: {
+      min: 15,
+      max: 15
+    },
+    chimney: 'Цегляний',
+    durationDays: 7,
+    completedYear: 2024,
+    location: 'с. Корнешти, Чернівецька обл.',
+  },
 
   // ----------------------------------------------------
   // Участь майстра
@@ -177,6 +191,11 @@ export const works: Work[] = [
     'cooktop',
     'tiled',
     'heat-storage',
+  ],
+
+  capabilities: [
+    'heating',
+    'cooking',
   ],
 
   materials: [
@@ -312,6 +331,11 @@ export const works: Work[] = [
     'corner',
     'open-firebox',
     'wood-storage',
+  ],
+
+  capabilities: [
+    'heating',
+    'decorative',
   ],
 
   materials: [
@@ -598,6 +622,11 @@ export const works: Work[] = [
   features: [
     'corner',
     'closed-firebox',
+  ],
+
+  capabilities: [
+    'heating',
+    'decorative'
   ],
 
   materials: [
@@ -895,6 +924,11 @@ export const works: Work[] = [
     'multiroom-heating',
   ],
 
+  capabilities: [
+    'heating',
+    'cooking',
+  ],
+
   materials: [
     'building-brick',
     'firebrick',
@@ -1053,6 +1087,11 @@ export const works: Work[] = [
     'multiroom-heating',
   ],
 
+  capabilities: [
+    'heating',
+    'decorative',
+  ],
+
   materials: [
     'building-brick',
     'natural-stone',
@@ -1188,6 +1227,11 @@ export const works: Work[] = [
   features: [
     'cooktop',
     'heat-storage',
+  ],
+
+  capabilities: [
+    'heating',
+    'cooking',
   ],
 
   materials: [
@@ -1482,6 +1526,11 @@ export const works: Work[] = [
     'closed-firebox',
   ],
 
+  capabilities: [
+    'heating',
+    'decorative',
+  ],  
+  
   materials: [
     'building-brick',
     'firebrick',
@@ -1623,6 +1672,12 @@ export const works: Work[] = [
     'wood-storage',
   ],
 
+  capabilities: [
+    'barbecue',
+    'grilling',
+    'smoking',
+  ],
+
   materials: [
     'building-brick',
     'firebrick',
@@ -1758,6 +1813,11 @@ export const works: Work[] = [
   features: [
     'corner',
     'closed-firebox',
+  ],
+
+  capabilities: [
+    'heating',
+    'decorative',
   ],
 
   materials: [
@@ -1900,6 +1960,14 @@ export const works: Work[] = [
     'oven',
   ],
 
+  capabilities: [
+    'heating',
+    'cooking',
+    'baking',
+    'boiling',
+    'drying',
+  ],
+
   materials: [
     'building-brick',
     'firebrick',
@@ -1912,14 +1980,6 @@ export const works: Work[] = [
   purposes: [
     'heating',
     'cooking',
-  ],
-
-  capabilities: [
-    'heating',
-    'cooking',
-    'baking',
-    'boiling',
-    'drying',
   ],
 
   // ----------------------------------------------------
@@ -2189,6 +2249,12 @@ export const works: Work[] = [
     'compact',
   ],
 
+  capabilities: [
+    'heating',
+    'cooking',
+    'boiling',
+  ],
+
   materials: [
     'building-brick',
     'firebrick',
@@ -2328,6 +2394,11 @@ export const works: Work[] = [
 
   features: [
     'open-firebox',
+    'decorative',
+  ],
+
+  capabilities: [
+    'heating',
     'decorative',
   ],
 
@@ -2478,6 +2549,11 @@ export const works: Work[] = [
     'worktop',
   ],
 
+  capabilities: [
+    'barbecue',
+    'grilling',
+  ],
+
   materials: [
     'building-brick',
     'firebrick',
@@ -2613,6 +2689,12 @@ export const works: Work[] = [
     'interroom',
     'cooktop',
     'heat-storage',
+  ],
+
+  capabilities: [
+    'heating',
+    'cooking',
+    'boiling',
   ],
 
   materials: [
@@ -2760,6 +2842,11 @@ export const works: Work[] = [
     'charcoal',
   ],
 
+  capabilities: [
+    'barbecue',
+    'grilling',
+  ],
+
   purposes: [
     'outdoor-cooking',
   ],
@@ -2886,6 +2973,12 @@ export const works: Work[] = [
     'interroom',
     'cooktop',
     'heat-storage',
+  ],
+
+  capabilities: [
+    'heating',
+    'cooking',
+    'boiling',
   ],
 
   materials: [
@@ -3026,6 +3119,14 @@ export const works: Work[] = [
     'sink',
     'worktop',
     'wood-storage',
+  ]
+  ,
+  capabilities: [
+    'barbecue',
+    'grilling',
+    'smoking',
+    'baking',
+    'drying',
   ],
 
   materials: [
@@ -3166,6 +3267,11 @@ export const works: Work[] = [
     'masonry-firebox',
     'glass-door',
     'heat-storage',
+  ],
+
+  capabilities: [
+    'heating',
+    'decorative',
   ],
 
   materials: [

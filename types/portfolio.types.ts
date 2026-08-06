@@ -16,20 +16,21 @@ export interface Review {
 }
 
 export interface Contribution {
-  projectType: string;      // id з PROJECT_TYPES
-  roles: string[];          // id з MASTER_ROLES
+  projectType: string; // id з PROJECT_TYPES
+  roles: string[]; // id з MASTER_ROLES
   note?: string;
 }
 
 export interface Specification {
   heatedArea?: {
-  min: number;
-  max: number;
-};  // 40–60
-  chimney?: string;      // Цегляний
-  durationDays?: number;     // 14
-  completedYear?: number;  // 2024
-  location?: string;     // Чернівецька обл.
+    min: number;
+    max: number;
+  };
+
+  chimney?: string;
+  durationDays?: number;
+  completedYear?: number;
+  location?: string;
 }
 
 export interface SEO {
@@ -37,8 +38,6 @@ export interface SEO {
   description?: string;
   keywords?: string[];
 }
-
-
 
 export interface Work {
   // ----------------------------------------------------
@@ -69,7 +68,6 @@ export interface Work {
   // ----------------------------------------------------
 
   description?: string;
-
   clientTask?: string;
   solution?: string;
 
@@ -77,25 +75,25 @@ export interface Work {
   // Технічні характеристики
   // ----------------------------------------------------
 
-  specifications?: Specification;
+  specifications: Specification;
 
   // ----------------------------------------------------
   // Участь майстра
   // ----------------------------------------------------
 
-  contribution?: Contribution;
+  contribution: Contribution;
 
   // ----------------------------------------------------
   // Переваги
   // ----------------------------------------------------
 
-  benefits?: string[];
+  benefits: string[];
 
   // ----------------------------------------------------
   // Відгуки
   // ----------------------------------------------------
 
-  reviews?: Review[];
+  reviews: Review[];
 
   // ----------------------------------------------------
   // SEO
@@ -108,5 +106,5 @@ export interface Work {
   // ----------------------------------------------------
 
   featured?: boolean;
-  isPublished?: boolean;
+  isPublished: boolean;
 }
