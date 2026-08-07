@@ -143,59 +143,62 @@ export default function PortfolioModal({
             </p>
           )}
 
-          {work.clientTask && (
-            <ModalSection title="Завдання">
-              <p>{work.clientTask}</p>
-            </ModalSection>
-          )}
+          <div className={css.sections}>
 
-          {work.solution && (
-            <ModalSection title="Реалізація">
-              <p>{work.solution}</p>
-            </ModalSection>
-          )}
+            {work.clientTask && (
+              <ModalSection title="Завдання">
+                <p>{work.clientTask}</p>
+              </ModalSection>
+            )}
 
-          <ModalSection title="Характеристики">
-            <Specifications
-              specification={work.specifications}
-            />
-          </ModalSection>
+            {work.solution && (
+              <ModalSection title="Реалізація">
+                <p>{work.solution}</p>
+              </ModalSection>
+            )}
 
-          <ModalSection title="Переваги">
-            <Benefits benefits={work.benefits} />
-          </ModalSection>
-
-          {work.features?.length > 0 && (
-            <ModalSection title="Особливості">
-              <InfoList
-                items={getFeatureNames(work.features)}
+            <ModalSection title="Характеристики">
+              <Specifications
+                specification={work.specifications}
               />
             </ModalSection>
-          )}
 
-          {work.materials?.length > 0 && (
-            <ModalSection title="Матеріали">
-              <InfoList
-                items={getMaterialNames(work.materials)}
-              />
+            <ModalSection title="Переваги">
+              <Benefits benefits={work.benefits} />
             </ModalSection>
-          )}
 
-          {work.fuels?.length > 0 && (
-            <ModalSection title="Паливо">
-              <InfoList
-                items={getFuelNames(work.fuels)}
-              />
-            </ModalSection>
-          )}
+            {work.features?.length > 0 && (
+              <ModalSection title="Особливості">
+                <InfoList
+                  items={getFeatureNames(work.features)}
+                />
+              </ModalSection>
+            )}
 
-          {work.purposes?.length > 0 && (
-            <ModalSection title="Призначення">
-              <InfoList
-                items={getPurposeNames(work.purposes)}
-              />
-            </ModalSection>
-          )}
+            {work.materials?.length > 0 && (
+              <ModalSection title="Матеріали">
+                <InfoList
+                  items={getMaterialNames(work.materials)}
+                />
+              </ModalSection>
+            )}
+
+            {work.fuels?.length > 0 && (
+              <ModalSection title="Паливо">
+                <InfoList
+                  items={getFuelNames(work.fuels)}
+                />
+              </ModalSection>
+            )}
+
+            {work.purposes?.length > 0 && (
+              <ModalSection title="Призначення">
+                <InfoList
+                  items={getPurposeNames(work.purposes)}
+                />
+              </ModalSection>
+            )}
+          </div>        
         </div>
       </div>
     </div>

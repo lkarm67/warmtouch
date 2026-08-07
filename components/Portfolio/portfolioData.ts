@@ -2239,7 +2239,6 @@ export const works: Work[] = [
   // ----------------------------------------------------
 
   categories: [
-    'gruby',
     'pechi',
   ],
 
