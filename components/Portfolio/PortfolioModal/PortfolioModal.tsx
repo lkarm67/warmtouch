@@ -14,8 +14,11 @@ import Benefits from './Benefits';
 
 import {
   getFeatureNames,
+  getCapabilityNames,
   getFuelNames,
   getMaterialNames,
+  getMasterRoleNames,
+  getProjectTypeName,
   getPurposeNames,
 } from '@/lib/portfolio.helpers';
 
@@ -171,6 +174,16 @@ export default function PortfolioModal({
               <ModalSection title="Особливості">
                 <InfoList
                   items={getFeatureNames(work.features)}
+                  variant="badges"
+                />
+              </ModalSection>
+            )}
+
+            {work.capabilities?.length > 0 && (
+              <ModalSection title="Можливості">
+                <InfoList
+                  items={getCapabilityNames(work.capabilities)}
+                  variant="badges"
                 />
               </ModalSection>
             )}
@@ -196,6 +209,65 @@ export default function PortfolioModal({
                 <InfoList
                   items={getPurposeNames(work.purposes)}
                 />
+              </ModalSection>
+            )}
+
+            <ModalSection title="Участь майстра">
+              <dl className={css.contribution}>
+                <dt>Тип проєкту</dt>
+                  <dd>
+                    {getProjectTypeName(work.contribution.projectType)}
+                  </dd>
+
+                  {work.contribution.roles.length > 0 && (
+                    <>
+                      <dt>Роль майстра</dt>
+                        <dd>
+                          <InfoList
+                            items={getMasterRoleNames(
+                              work.contribution.roles
+                            )}
+                            variant="badges"
+                          />
+                        </dd>
+                    </>
+                  )}
+
+                  {work.contribution.note && (
+                    <>
+                      <dt>Примітка</dt>
+                        <dd>{work.contribution.note}</dd>
+                    </>
+                  )}
+              </dl>
+            </ModalSection>
+
+            {work.reviews?.length > 0 && (
+              <ModalSection title="Відгуки">
+                <div className={css.reviews}>
+                  {work.reviews.map((review, index) => (
+                    <article
+                      className={css.review}
+                      key={`${review.author}-${review.date ?? index}`}
+                    >
+                      <div className={css.reviewHeader}>
+                        <strong>{review.author}</strong>
+
+                        {review.rating && (
+                          <span className={css.rating}>
+                            ★ {review.rating}/5
+                          </span>
+                        )}
+                      </div>
+
+                      <p>{review.text}</p>
+
+                      {review.date && (
+                        <time>{review.date}</time>
+                      )}
+                    </article>
+                  ))}
+                </div>
               </ModalSection>
             )}
           </div>        

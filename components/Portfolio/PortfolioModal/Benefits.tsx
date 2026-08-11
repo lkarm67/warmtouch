@@ -1,17 +1,18 @@
+import css from './Benefits.module.css';
+
 interface Props {
   benefits?: string[];
 }
 
-export default function Benefits({
-  benefits,
-}: Props) {
+export default function Benefits({ benefits }: Props) {
   if (!benefits?.length) return null;
 
   return (
-    <ul>
+    <ul className={css.list}>
       {benefits.map(item => (
-        <li key={item}>
-          ✓ {item}
+        <li className={css.item} key={item}>
+          <span className={css.icon}>✓</span>
+          {item}
         </li>
       ))}
     </ul>

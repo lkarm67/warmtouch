@@ -1,0 +1,26 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  color: #2e2d2d;
+  line-height: 1.5;
+}
+
+.icon {
+  flex-shrink: 0;
+
+  color: #9b5a32;
+  font-weight: 700;
+}
