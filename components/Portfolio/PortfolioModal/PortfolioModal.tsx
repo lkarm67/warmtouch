@@ -183,7 +183,6 @@ export default function PortfolioModal({
               <ModalSection title="Можливості">
                 <InfoList
                   items={getCapabilityNames(work.capabilities)}
-                  variant="badges"
                 />
               </ModalSection>
             )}
@@ -251,7 +250,7 @@ export default function PortfolioModal({
                       key={`${review.author}-${review.date ?? index}`}
                     >
                       <div className={css.reviewHeader}>
-                        <strong>{review.author}</strong>
+                        <strong className={css.author}>{review.author}</strong>
 
                         {review.rating && (
                           <span className={css.rating}>

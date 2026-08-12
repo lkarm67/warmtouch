@@ -45,12 +45,13 @@ export const works: Work[] = [
     ],
 
     capabilities: [
-      'heating',
-      'cooking',
+      'boiling',
+      'stewing',
     ],
 
     materials: [
-      'brick',
+      'clinker-brick',
+      'firebrick',
       'cast-iron',
     ],
 
@@ -82,12 +83,12 @@ export const works: Work[] = [
   specifications: {
     heatedArea: {
       min: 15,
-      max: 15
+      max: 40
     },
     chimney: 'Цегляний',
     durationDays: 7,
     completedYear: 2024,
-    location: 'с. Корнешти, Чернівецька обл.',
+    location: '',
   },
 
   // ----------------------------------------------------
@@ -194,8 +195,8 @@ export const works: Work[] = [
   ],
 
   capabilities: [
-    'heating',
-    'cooking',
+    'boiling',
+    'stewing',
   ],
 
   materials: [
@@ -233,7 +234,7 @@ export const works: Work[] = [
   specifications: {
     heatedArea: {
       min: 15,
-      max: 15
+      max: 40
     },
     chimney: 'Цегляний',
     durationDays: 9,
@@ -333,10 +334,7 @@ export const works: Work[] = [
     'wood-storage',
   ],
 
-  capabilities: [
-    'heating',
-    'decorative',
-  ],
+  capabilities: [],
 
   materials: [
     'firebrick',
@@ -372,7 +370,7 @@ export const works: Work[] = [
     heatedArea: 
      {
       min: 15,
-      max: 15
+      max: 25
      },
     chimney: 'Цегляний',
     durationDays: 7,
@@ -624,10 +622,7 @@ export const works: Work[] = [
     'closed-firebox',
   ],
 
-  capabilities: [
-    'heating',
-    'decorative'
-  ],
+  capabilities: [],
 
   materials: [
     'ceramic-brick',
@@ -663,7 +658,7 @@ export const works: Work[] = [
 
   specifications: {
     heatedArea: {
-      min: 20,
+      min: 15,
       max: 30
     },
     chimney: 'Цегляний + труба з нержавіючої сталі',
@@ -677,7 +672,7 @@ export const works: Work[] = [
   // ----------------------------------------------------
 
   contribution: {
-    projectType: 'individual',
+    projectType: 'team',
     roles: [
       'full',
     ],
@@ -771,6 +766,14 @@ export const works: Work[] = [
     'wood-storage',
   ],
 
+  capabilities: [
+    'barbecue',
+    'grilling',
+    'baking',
+    'smoking',
+    'boiling',
+  ],
+
   materials: [
     'ceramic-brick',
     'firebrick',
@@ -785,14 +788,6 @@ export const works: Work[] = [
 
   purposes: [
     'outdoor-cooking',
-  ],
-
-  capabilities: [
-    'barbecue',
-    'grilling',
-    'baking',
-    'smoking',
-    'boiling',
   ],
 
   // ----------------------------------------------------
@@ -924,10 +919,7 @@ export const works: Work[] = [
     'multiroom-heating',
   ],
 
-  capabilities: [
-    'heating',
-    'cooking',
-  ],
+  capabilities: [],
 
   materials: [
     'building-brick',
@@ -967,8 +959,8 @@ export const works: Work[] = [
     },
     chimney: 'Цегляний',
     durationDays: 12,
-    completedYear: 2018, // якщо точний рік невідомий — зміните
-    location: '',         // можна залишити порожнім
+    completedYear: 2018, 
+    location: '',         
   },
 
   // ----------------------------------------------------
@@ -1087,10 +1079,7 @@ export const works: Work[] = [
     'multiroom-heating',
   ],
 
-  capabilities: [
-    'heating',
-    'decorative',
-  ],
+  capabilities: [],
 
   materials: [
     'building-brick',
@@ -1162,7 +1151,14 @@ export const works: Work[] = [
   // Відгуки
   // ----------------------------------------------------
 
-  reviews: [],
+  reviews: [
+    {
+      author: 'Людмила',
+      text: 'Майстер Григорій якісно зробив грубу із старого кахлю, який мали в наявності. Палимо зранку. Вона поступово нагрівається і тримає тепло цілий день, а вночі не так жарко. Ванна кімната теж зігрівається за рахунок тепла, яке поступає через повітряну трубу, вбудовану в грубу. Не димить ні в кімнаті, ні в ванній. Як замовниця я дуже задоволена його роботою, тому без вагань рекомендую його як майстра-пічника. Він дуже уважний до деталей, все робить акуратно і чисто. Це була його перша кахельна піч, але він справився відмінно. Дякую йому за роботу. Я вневнена, що він може зробити ще багато чудових печей!',
+      rating: 5,
+      date: '2026-08-12',
+    },
+  ],
 
   // ----------------------------------------------------
   // SEO

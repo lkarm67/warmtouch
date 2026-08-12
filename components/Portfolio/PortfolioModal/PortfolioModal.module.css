@@ -164,6 +164,11 @@
   margin-bottom: 8px;
 }
 
+.author {
+  font-weight: 600;
+  color: #9b5a32;
+}
+
 .review p {
   margin: 0 0 8px;
   line-height: 1.5;
