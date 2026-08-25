@@ -302,6 +302,10 @@ export const MASTER_ROLES = [
     name: 'Чорнова кладка',
   },
   {
+    id: 'firebox-installation',
+    name: 'Встановлення камінної топки',
+  },
+  {
     id: 'facing',
     name: 'Облицювання',
   },

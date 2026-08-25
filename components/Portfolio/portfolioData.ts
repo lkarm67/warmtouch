@@ -140,8 +140,10 @@ export const works: Work[] = [
       'теплоакумулююча груба',
       'опалювально-варильна груба',
       'піч з варильною плитою',
-      'майстер пічник',
       'кладка груби',
+      'майстер пічник',
+      'Григорій Коротя',
+      'Теплий Дотик',
     ],
   },
 
@@ -291,6 +293,8 @@ export const works: Work[] = [
       'теплоакумулююча груба',
       'піч з плитою',
       'майстер пічник',
+      'Григорій Коротя',
+      'Теплий Дотик',
     ],
   },
 
@@ -620,6 +624,7 @@ export const works: Work[] = [
   features: [
     'corner',
     'closed-firebox',
+    'glass-door',
   ],
 
   capabilities: [],
@@ -674,7 +679,9 @@ export const works: Work[] = [
   contribution: {
     projectType: 'team',
     roles: [
-      'full',
+      'masonry',
+      'chimney',
+      'firebox-installation'
     ],
     note: 'Декоративне облицювання виконували інші майстри.',
   },
@@ -1226,8 +1233,9 @@ export const works: Work[] = [
   ],
 
   capabilities: [
-    'heating',
-    'cooking',
+    'boiling',
+    'stewing',
+    'drying',
   ],
 
   materials: [
@@ -1263,8 +1271,8 @@ export const works: Work[] = [
 
   specifications: {
     heatedArea: {
-      min: 18,
-      max: 20,
+      min: 15,
+      max: 30,
     },
     chimney: 'Існуючий цегляний димохід',
     durationDays: 6,
@@ -1376,6 +1384,14 @@ export const works: Work[] = [
     'wood-storage',
   ],
 
+  capabilities: [
+    'barbecue',
+    'grilling',
+    'boiling',
+    'stewing',
+    'drying',
+  ],
+
   materials: [
     'building-brick',
     'firebrick',
@@ -1390,12 +1406,6 @@ export const works: Work[] = [
 
   purposes: [
     'outdoor-cooking',
-  ],
-
-  capabilities: [
-    'barbecue',
-    'grilling',
-    'boiling',
   ],
 
   // ----------------------------------------------------
@@ -1520,12 +1530,10 @@ export const works: Work[] = [
 
   features: [
     'closed-firebox',
+    'glass-door',
   ],
 
-  capabilities: [
-    'heating',
-    'decorative',
-  ],  
+  capabilities: [],  
   
   materials: [
     'building-brick',
@@ -1574,12 +1582,13 @@ export const works: Work[] = [
   // ----------------------------------------------------
 
   contribution: {
-    projectType: 'individual',
+    projectType: 'team',
     roles: [
       'masonry',
       'chimney',
       'firebox-installation',
     ],
+    note: 'Декоративне облицювання виконували інші майстри.',
   },
 
   // ----------------------------------------------------
@@ -1809,12 +1818,10 @@ export const works: Work[] = [
   features: [
     'corner',
     'closed-firebox',
+    'glass-door',
   ],
 
-  capabilities: [
-    'heating',
-    'decorative',
-  ],
+  capabilities: [],
 
   materials: [
     'firebrick',
@@ -1862,11 +1869,11 @@ export const works: Work[] = [
   // ----------------------------------------------------
 
   contribution: {
-    projectType: 'individual',
+    projectType: 'team',
     roles: [
-      'firebox-installation',
-      'chimney',
       'masonry',
+      'chimney',
+      'firebox-installation',
     ],
   },
 
@@ -1957,8 +1964,6 @@ export const works: Work[] = [
   ],
 
   capabilities: [
-    'heating',
-    'cooking',
     'baking',
     'boiling',
     'drying',
@@ -2101,12 +2106,15 @@ export const works: Work[] = [
     'smokehouse',
     'cooktop',
     'sink',
+    'wood-storage',
   ],
 
   capabilities: [
     'barbecue',
     'grilling',
     'boiling',
+    'stewing',
+    'drying',
     'smoking',
   ],
 
@@ -2245,9 +2253,9 @@ export const works: Work[] = [
   ],
 
   capabilities: [
-    'heating',
-    'cooking',
     'boiling',
+    'stewing',
+    'drying',
   ],
 
   materials: [
@@ -2346,7 +2354,7 @@ export const works: Work[] = [
       'варильна плита',
       'теплоакумулююча груба',
       'цегляна груба',
-      'пічник',
+      'майстерпічник',
       'Григорій Коротя',
       'Теплий Дотик',
     ],
@@ -2392,10 +2400,7 @@ export const works: Work[] = [
     'decorative',
   ],
 
-  capabilities: [
-    'heating',
-    'decorative',
-  ],
+  capabilities: [],
 
   materials: [
     'firebrick',
@@ -2606,7 +2611,7 @@ export const works: Work[] = [
     'Центральна зона барбекю',
     'Ніша під встановлення готового гриля',
     'Вбудована мийка',
-    'Прості робочі поверхні',
+    'Просторі робочі поверхні',
     'Ніші для зберігання кухонного приладдя та дров',
     'Двоканальний цегляний димохід',
     'Міцна та довговічна конструкція',
@@ -2687,9 +2692,9 @@ export const works: Work[] = [
   ],
 
   capabilities: [
-    'heating',
-    'cooking',
     'boiling',
+    'stewing',
+    'drying',
   ],
 
   materials: [
@@ -2827,6 +2832,11 @@ export const works: Work[] = [
     'worktop',
   ],
 
+  capabilities: [
+    'barbecue',
+    'grilling',
+  ],
+
   materials: [
     'firebrick',
     'clinker-brick',
@@ -2835,11 +2845,6 @@ export const works: Work[] = [
   fuels: [
     'wood',
     'charcoal',
-  ],
-
-  capabilities: [
-    'barbecue',
-    'grilling',
   ],
 
   purposes: [
@@ -2888,7 +2893,7 @@ export const works: Work[] = [
   benefits: [
     'Барбекю з відкритою жаровнею',
     'Вбудована мийка',
-    'Дві просторі робочі поверхні',
+    'Робочі поверхні',
     'Надійний цегляний димохід',
     'Міцна клінкерна кладка',
     'Зручне рішення для літньої кухні',
@@ -2971,9 +2976,9 @@ export const works: Work[] = [
   ],
 
   capabilities: [
-    'heating',
-    'cooking',
     'boiling',
+    'stewing',
+    'drying',
   ],
 
   materials: [
@@ -3156,10 +3161,6 @@ export const works: Work[] = [
   // ----------------------------------------------------
 
   specifications: {
-    heatedArea: {
-      min: 0,
-      max: 0,
-    },
     chimney: 'Цегляний',
     durationDays: 18,
     completedYear: 2022,
@@ -3186,7 +3187,7 @@ export const works: Work[] = [
     'Хлібна камера для випікання',
     'Вбудована коптильня',
     'Інтегрована мийка',
-    'Просторі робочі поверхні',
+    'Робоча поверхня для підготовки продуктів',
     'Довговічна цегляна конструкція',
   ],
 
@@ -3264,10 +3265,7 @@ export const works: Work[] = [
     'heat-storage',
   ],
 
-  capabilities: [
-    'heating',
-    'decorative',
-  ],
+  capabilities: [],
 
   materials: [
     'firebrick',
