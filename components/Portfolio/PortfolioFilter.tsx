@@ -1,34 +1,43 @@
-import { works } from "./portfolioData";
-import css from "./Portfolio.module.css";
+import css from './Portfolio.module.css';
+import { CATEGORIES } from '@/lib/config/portfolio.config';
 
 interface Props {
-    activeCategory: string;
-    setActiveCategory: (category: string) => void;
+  activeCategory: string;
+  setActiveCategory: (category: string) => void;
 }
 
-export default function PortfolioFilter({ activeCategory, setActiveCategory }: Props) {
-    const categories = [
-        'Усі',
-        ...new Set(
-            works.flatMap(work => work.categories)
-        )
-    ];
+export default function PortfolioFilter({
+  activeCategory,
+  setActiveCategory,
+}: Props) {
+  return (
+    <div className={css.filter}>
+      <button
+        type="button"
+        className={
+          activeCategory === 'Усі'
+            ? `${css.button} ${css.active}`
+            : css.button
+        }
+        onClick={() => setActiveCategory('Усі')}
+      >
+        Усі
+      </button>
 
-    return (
-        <div className={css.filter}>
-            {categories.map(category => (
-                <button
-                    key={category}
-                    className={
-                        activeCategory === category
-                            ? `${css.button} ${css.active}`
-                            : css.button
-                 }
-                    onClick={() => setActiveCategory(category)}
-                >
-                    {category}
-                </button>
-            ))}
-        </div>
-    );
+      {CATEGORIES.map((category) => (
+        <button
+          key={category.id}
+          type="button"
+          className={
+            activeCategory === category.id
+              ? `${css.button} ${css.active}`
+              : css.button
+          }
+          onClick={() => setActiveCategory(category.id)}
+        >
+          {category.name}
+        </button>
+      ))}
+    </div>
+  );
 }
