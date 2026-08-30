@@ -1,12 +1,38 @@
 'use client';
  
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import css from './Services.module.css';
 import { servicesData, type Service } from './servicesData';
  
 export default function Services() {
   const [activeService, setActiveService] = useState<Service | null>(null);
+
+  useEffect(() => {
+    if (!activeService) return;
+
+    const scrollY = window.scrollY;
+
+    const html = document.documentElement;
+    const body = document.body;
+
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}px`;
+    body.style.left = '0';
+    body.style.right = '0';
+
+    return () => {
+      body.style.position = '';
+      body.style.top = '';
+      body.style.left = '';
+      body.style.right = '';
+      body.style.overflow = '';
+
+      html.style.overflow = '';
+
+      window.scrollTo(0, scrollY);
+    };
+  }, [activeService]);
  
   const openModal = (service: Service) => setActiveService(service);
   const closeModal = () => setActiveService(null);

@@ -8,105 +8,170 @@
   margin: 0 auto;
 }
 
+/* ==================================================
+   HEADER
+   ================================================== */
+
 .header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 24px;  
+  gap: 24px;
+
   max-width: 700px;
-  margin: 0 auto; 
+  margin: 0 auto 32px;
+
   text-align: center;
 }
 
 .title {
   margin: 0;
-  text-align: center;
+
   font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
+
   color: #4a3728;
 }
 
-.dividerContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 12px;
-    line-height: 1.6;
+.dividerContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .divider {
-    width: 150px;
-    height: 4px;
-    background-color: var(--accent-color);
-    border: none;
-    box-shadow:
-      0 4px 12px rgba(0, 0, 0, 0.25),
-      0 0 20px rgba(255, 140, 0, 0.25);
+  width: 150px;
+  height: 4px;
+
+  margin: 0;
+  border: none;
+
+  background-color: var(--accent-color);
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(255, 140, 0, 0.25);
 }
 
-.icon_fire{
-    width: 24px;
-    height: 24px;
-    fill: var(--accent-color);
+.icon_fire {
+  width: 24px;
+  height: 24px;
+
+  fill: var(--accent-color);
 }
 
 .subtitle {
   max-width: 800px;
-  margin: 0 auto 32px;
-  text-align: center;
+  margin: 0;
+
   font-size: 18px;
   font-weight: 600;
+  line-height: 1.6;
+
   color: var(--bg-color);
 }
 
-/* =========================
-   Слайдер
-   ========================= */
+/* ==================================================
+   SLIDER
+   ================================================== */
 
 .slider {
   position: relative;
+
   display: flex;
   align-items: center;
+
   padding: 0 38px;
 }
 
 .viewport {
   width: 100%;
+  margin: -70px 20px;
+  padding: 70px 20px;
+
   overflow: hidden;
 }
 
 .list {
+  --gap: 50px;
+
   display: flex;
+  align-items: stretch;
+
   width: 100%;
-  gap: 0;
+
+  gap: var(--gap);
+
   transition: transform 0.35s ease;
+
+  /*
+   * Один крок = ширина картки + gap.
+   *
+   * Формула залежить від кількості
+   * карток на екрані.
+   */
+
   transform: translateX(
-    calc(var(--translate-x) * -1)
+    calc(
+      var(--current-slide) *
+      (
+        -1 *
+        (
+          (100% - ((var(--visible-slides) - 1) * var(--gap)))
+          / var(--visible-slides)
+          + var(--gap)
+        )
+      )
+    )
   );
 }
 
+/* ==================================================
+   CARD
+   ================================================== */
+
 .card {
   display: flex;
-  flex: 0 0 100%;
+
+  flex: 0 0
+    calc(
+      (100% - ((var(--visible-slides) - 1) * var(--gap)))
+      / var(--visible-slides)
+    );
+
   flex-direction: column;
+
   min-width: 0;
+  min-height: 420px;
+
   padding: 22px;
+
   background-color: var(--text-color);
+
   border-radius: 16px;
+
   box-shadow:
-        0 20px 50px rgba(0,0,0,.55);
+    0 10px 20px rgba(0, 0, 0, 0.55);
 }
+
+/* ==================================================
+   RATING
+   ================================================== */
 
 .rating {
   margin-bottom: 18px;
+
   font-size: 20px;
   line-height: 1;
   letter-spacing: 3px;
+
   color: var(--accent-color);
 }
+
+/* ==================================================
+   TEXT
+   ================================================== */
 
 .textWrapper {
   margin-bottom: 10px;
@@ -114,9 +179,12 @@
 
 .textWrapper:not(.expanded) {
   display: -webkit-box;
+
   overflow: hidden;
+
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 7;
+
   line-clamp: 7;
 }
 
@@ -126,20 +194,32 @@
 
 .text {
   margin: 0;
+
   font-size: 15px;
   line-height: 1.7;
+
   color: var(--bg-color);
 }
 
+/* ==================================================
+   MORE BUTTON
+   ================================================== */
+
 .moreButton {
   align-self: flex-start;
+
   margin: 0 0 20px;
   padding: 0;
+
   border: 0;
+
   background: none;
+
   color: #9f6127;
+
   font-size: 15px;
   font-weight: 600;
+
   cursor: pointer;
 }
 
@@ -147,12 +227,18 @@
   text-decoration: underline;
 }
 
+/* ==================================================
+   AUTHOR
+   ================================================== */
+
 .author {
   display: flex;
   flex-direction: column;
   gap: 4px;
+
   margin-top: auto;
   padding-top: 20px;
+
   border-top: 1px solid #8a7867;
 }
 
@@ -166,11 +252,18 @@
   color: #8a7867;
 }
 
+/* ==================================================
+   WORK
+   ================================================== */
+
 .work {
   display: flex;
   flex-direction: column;
   gap: 5px;
+
   margin-top: 18px;
+  min-height: 68px;
+
   font-size: 14px;
   line-height: 1.4;
 }
@@ -183,9 +276,31 @@
   color: #9f6127;
 }
 
-/* =========================
-   Стрілки
-   ========================= */
+.workLink {
+  padding: 0;
+
+  border: 0;
+
+  background: none;
+
+  color: #9f6127;
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.workLink:hover {
+  text-decoration: underline;
+}
+
+/* ==================================================
+   ARROWS
+   ================================================== */
 
 .arrow {
   position: absolute;
@@ -198,15 +313,13 @@
 
   width: 32px;
   height: 32px;
-  padding-right: 2px;
+
+  padding: 0;
 
   border: 1px solid var(--accent-color);
   border-radius: 50%;
 
   background-color: var(--text-color);
-
-  font-size: 20px;
-  font-weight: 700;
 
   cursor: pointer;
 
@@ -223,16 +336,33 @@
 
 .arrow:hover {
   background-color: var(--accent-color);
-  color: var(--bg-color);
 }
+
+.arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.arrow:disabled:hover {
+  background-color: var(--text-color);
+}
+
+.arrow:disabled .arrowIcon {
+  border-color: #8a7867;
+}
+
+/* ==================================================
+   ARROW ICON
+   ================================================== */
 
 .arrowIcon {
   display: block;
+
   width: 10px;
   height: 10px;
 
-  border-left: 2px solid var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);
+  border-left: 3px solid var(--accent-color);
+  border-bottom: 3px solid var(--accent-color);
 
   transform: rotate(45deg);
 }
@@ -241,25 +371,26 @@
   transform: rotate(225deg);
 }
 
-.arrowIcon:hover {
-  border-left: 2px solid var(--text-color);
-  border-bottom: 2px solid var(--text-color);
+.arrow:hover .arrowIcon {
+  border-color: var(--text-color);
 }
 
-/* =========================
-   Крапки
-   ========================= */
+/* ==================================================
+   DOTS
+   ================================================== */
 
 .dots {
   display: flex;
   justify-content: center;
   gap: 8px;
+
   margin-top: 24px;
 }
 
 .dot {
   width: 8px;
   height: 8px;
+
   padding: 0;
 
   border: 0;
@@ -268,18 +399,24 @@
   background-color: #9f6127;
 
   cursor: pointer;
+
+  transition:
+    width 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .dotActive {
   width: 22px;
+
   border-radius: 5px;
+
   background-color: var(--accent-color);
 }
 
-/* =========================
-   Планшет
+/* ==================================================
+   TABLET
    768px+
-   ========================= */
+   ================================================== */
 
 @media (min-width: 768px) {
   .reviews {
@@ -290,44 +427,53 @@
     width: min(100% - 32px, 1200px);
   }
 
+  .header {
+    margin-bottom: 40px;
+  }
+
   .title {
     font-size: 32px;
   }
 
   .subtitle {
     font-size: 17px;
-    margin-bottom: 40px;
   }
 
   .slider {
     padding: 0 44px;
   }
-
+  
   .list {
-    gap: 20px;
+    --gap: 40px;
   }
 
   .card {
-    flex: 0 0 calc((100% - 20px) / 2);
     padding: 24px;
   }
 
   .arrow {
     width: 36px;
     height: 36px;
-    font-size: 20px;
-    font-weight: 800;
+  }
+
+  .arrowIcon {
+    width: 11px;
+    height: 11px;
   }
 }
 
-/* =========================
-   Десктоп
+/* ==================================================
+   DESKTOP
    1024px+
-   ========================= */
+   ================================================== */
 
 @media (min-width: 1024px) {
   .reviews {
     padding: 80px 0;
+  }
+
+  .header {
+    margin-bottom: 48px;
   }
 
   .title {
@@ -336,25 +482,31 @@
 
   .subtitle {
     font-size: 18px;
-    margin-bottom: 48px;
   }
 
   .slider {
-    padding: 0;
-  }
-
-  .viewport {
-    overflow: visible;
-  }
-
-  .list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    transform: none;
+    padding: 0 44px;
   }
 
   .card {
+    min-height: 440px;
     padding: 28px;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrowIcon {
+    width: 12px;
+    height: 12px;
+
+    border-left-width: 3px;
+    border-bottom-width: 3px;
+  }
+
+  .dots {
+    margin-top: 28px;
   }
 }

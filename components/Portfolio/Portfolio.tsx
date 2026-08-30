@@ -1,27 +1,28 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from "react";
 
-import css from './Portfolio.module.css';
-import { works } from './portfolioData';
+import css from "./Portfolio.module.css";
+import { works } from "./portfolioData";
 
-import PortfolioCard from './PortfolioCard';
-import PortfolioFilter from './PortfolioFilter';
-import PortfolioModal from './PortfolioModal/PortfolioModal';
-import Pagination from './Pagination';
+import PortfolioCard from "./PortfolioCard";
+import PortfolioFilter from "./PortfolioFilter";
+import PortfolioModal from "./PortfolioModal/PortfolioModal";
+import Pagination from "./Pagination";
 
-import type { Work } from '@/types/portfolio.types';
+import type { Work } from "@/types/portfolio.types";
 
 const ITEMS_PER_PAGE = 4;
 
 export default function Portfolio() {
-  const [activeCategory, setActiveCategory] = useState('Усі');
+  const [activeCategory, setActiveCategory] = useState("Усі");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedWork, setSelectedWork] = useState<Work | null>(null);
+  const [returnToReviews, setReturnToReviews] = useState(false);
 
   // Фільтрація робіт за категорією
   const filteredWorks =
-    activeCategory === 'Усі'
+    activeCategory === "Усі"
       ? works
       : works.filter((work) =>
           work.categories.includes(activeCategory)
@@ -58,18 +59,91 @@ export default function Portfolio() {
 
     if (grid) {
       const top =
-        grid.getBoundingClientRect().top + window.scrollY - 100;
+        grid.getBoundingClientRect().top +
+        window.scrollY -
+        100;
 
       window.scrollTo({
         top,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };
 
+  /*
+   * Відкриття роботи за slug.
+   *
+   * Використовується Reviews.
+   */
+  useEffect(() => {
+    const handleOpenWork = (event: Event) => {
+      const customEvent = event as CustomEvent<{
+        slug: string;
+      }>;
+
+      const slug = customEvent.detail?.slug;
+
+      if (!slug) return;
+
+      const workIndex = works.findIndex(
+        (work) => work.slug === slug
+      );
+
+      if (workIndex === -1) return;
+
+      const work = works[workIndex];
+
+      /*
+       * Якщо робота знаходиться в категорії "Усі",
+       * визначаємо її сторінку.
+       */
+      const page =
+        Math.floor(workIndex / ITEMS_PER_PAGE) + 1;
+
+      setActiveCategory("Усі");
+      setCurrentPage(page);
+      setReturnToReviews(true);
+
+      /*
+       * Даємо React оновити сторінку пагінації,
+       * після чого відкриваємо модальне вікно.
+       */
+      requestAnimationFrame(() => {
+        setSelectedWork(work);
+
+        const portfolio =
+          document.getElementById("portfolio");
+
+        if (portfolio) {
+          portfolio.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    };
+
+    window.addEventListener(
+      "open-portfolio-work",
+      handleOpenWork
+    );
+
+    return () => {
+      window.removeEventListener(
+        "open-portfolio-work",
+        handleOpenWork
+      );
+    };
+  }, []);
+
   return (
-    <section className={`${css.portfolio} container`}>
-      <h2 className={css.title}>Виконані роботи</h2>
+    <section
+      className={`${css.portfolio} container`}
+      id="portfolio"
+    >
+      <h2 className={css.title}>
+        Виконані роботи
+      </h2>
 
       <div className={css.dividerContainer}>
         <hr className={css.divider} />
@@ -82,9 +156,9 @@ export default function Portfolio() {
       </div>
 
       <p className={css.description}>
-        Від невеликого каміна до великої барбекю-зони — кожен проєкт
-        створюється індивідуально, з увагою до деталей, безпеки та
-        довговічності.
+        Від невеликого каміна до великої барбекю-зони —
+        кожен проєкт створюється індивідуально, з увагою
+        до деталей, безпеки та довговічності.
       </p>
 
       {/* Фільтр */}
@@ -117,7 +191,22 @@ export default function Portfolio() {
       <PortfolioModal
         work={selectedWork}
         isOpen={selectedWork !== null}
-        onClose={() => setSelectedWork(null)}
+        onClose={() => {
+          setSelectedWork(null);
+
+          if (returnToReviews) {
+            setReturnToReviews(false);
+
+            requestAnimationFrame(() => {
+              document
+                .getElementById("reviews")
+                  ?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+            });
+          }
+        }}
       />
     </section>
   );
