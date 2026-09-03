@@ -177,20 +177,6 @@
     color: var(--bg-color);
 }
 
-/*.infoTrustReasons{
-    position: relative;
-    flex: 0 0 32%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    min-width: 320px;
-    padding: 28px ;
-    border-radius: 8px;
-
-}*/
-
 .infoTrustReasons {
     position: relative;
     overflow: hidden;
@@ -305,7 +291,7 @@
 
 .ctaBtn:hover,
 .ctaBtn:focus {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(160, 82, 59, 0.2);
     background-color: var(--accent-hover);
 } 
