@@ -85,6 +85,7 @@ return (
                     Опишіть ваше замовлення, і майстер зв'яжеться
                     з вами для обговорення деталей.
                 </p>
+                <p className={css.description2}>Або зв'яжіться напряму</p>
             </div>
 
             <div className={css.contacts}>
@@ -94,7 +95,18 @@ return (
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Telegram
+                    <div className={`${css.contactButtonIcon} ${css.telegramIcon}`}>
+                        <svg className={css.messenger}>
+                            <use href="/icons.svg#icon-telegram"></use>
+                        </svg>
+                    </div>
+
+                    <div className={css.contactButtonText}>
+                        <p className={css.contactButtonTitle}>Telegram</p>
+                        <p className={css.contactButtonSubtitle}>
+                            Написати в Telegram
+                        </p>
+                    </div>
                 </a>
 
                 <a
@@ -103,7 +115,18 @@ return (
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Viber
+                    <div className={`${css.contactButtonIcon} ${css.viberIcon}`}>
+                        <svg className={css.messenger}>
+                            <use href="/icons.svg#icon-viber"></use>
+                        </svg>
+                    </div>
+
+                    <div className={css.contactButtonText}>
+                        <p className={css.contactButtonTitle}>Viber</p>
+                        <p className={css.contactButtonSubtitle}>
+                            Написати у Viber
+                        </p>
+                    </div>
                 </a>
 
                 <a
@@ -112,8 +135,26 @@ return (
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    WhatsApp
+                    <div className={`${css.contactButtonIcon} ${css.whatsappIcon}`}>
+                        <svg className={css.messenger}>
+                            <use href="/icons.svg#icon-whatsapp"></use>
+                        </svg>
+                    </div>
+
+                    <div className={css.contactButtonText}>
+                        <p className={css.contactButtonTitle}>WhatsApp</p>
+                        <p className={css.contactButtonSubtitle}>
+                            Написати у WhatsApp
+                        </p>
+                    </div>
                 </a>
+            </div>
+            
+            <div className={css.afterContactButtonBox}>
+                <svg className={css.iconShield}>
+                    <use href="/icons.svg#icon-shield1"></use>
+                </svg>
+                <p className={css.description2}>Швидко. Зручно. Відповідаю особисто.</p>
             </div>
 
             <form
@@ -211,11 +252,11 @@ return (
                 </button>
 
                 {success ? (
-    <p className={css.success}>
-        Дякуємо за звернення! Вашу заявку отримано.
-        Майстер зв'яжеться з вами найближчим часом.
-    </p>
-) : null}
+                    <p className={css.success}>
+                        Дякуємо за звернення! Вашу заявку отримано.
+                        Майстер зв'яжеться з вами найближчим часом.
+                    </p>
+                ) : null}
 
                 {error && (
                     <p className={css.error}>
