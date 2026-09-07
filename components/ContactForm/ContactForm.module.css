@@ -1,7 +1,7 @@
 .section {
     position: relative;
     overflow: hidden;
-    padding: 100px 20px;
+    padding: 60px 12px;
     background-color: #e4d6bc;
 }
 
@@ -11,8 +11,8 @@
     top: 0;
     right: 0;
 
-    width: 380px;
-    height: 320px;
+    width: 220px;
+    height: 190px;
 
     background-image: url("/images/contact/fireplace.png");
     background-repeat: no-repeat;
@@ -21,11 +21,14 @@
 
     opacity: 0.95;
     pointer-events: none;
+    display:none;
+    z-index: 0;
 }
 
 .container {
     width: min(100%, 900px);
     margin: 0 auto;
+    z-index: 1;
 }
 
 /* Заголовок */
@@ -34,17 +37,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
 
-    max-width: 700px;
-    margin: 0 auto 32px;
+    max-width: 600px;
+    margin: 0 auto 35px;
+
     text-align: center;
 }
 
 .subtitle {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+
     color: #b45309;
-    font-size: 15px;
+
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -52,47 +58,55 @@
 
 .title {
     margin: 0;
+
     color: #3f3328;
-    font-size: 36px;
+
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.1;
 }
 
-.dividerContainer{
+.dividerContainer {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .divider {
-    width: 150px;
-    height: 4px;
-    background-color: var(--accent-color);
+    width: 80px;
+    height: 3px;
+
     border: none;
+
+    background-color: var(--accent-color);
+
     box-shadow:
-      0 4px 12px rgba(0, 0, 0, 0.25),
-      0 0 20px rgba(255, 140, 0, 0.25);
+        0 4px 12px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(255, 140, 0, 0.25);
 }
 
-.icon_fire{
-    width: 24px;
-    height: 24px;
+.icon_fire {
+    width: 22px;
+    height: 22px;
+
     fill: var(--accent-color);
 }
 
 .description {
     margin: 0;
+
     color: #5f5144;
-    font-size: 18px;
+
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.6;
 }
 
 .description2 {
-    color: #8b5e3c;;
-    font-size: 13px;
+    color: #8b5e3c;
+
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -103,7 +117,8 @@
 .contacts {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
+
     margin-bottom: 30px;
 }
 
@@ -112,11 +127,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 16px;
+    gap: 14px;
 
     width: 100%;
-    min-height: 76px;
-    padding: 12px 18px;
+    min-height: 70px;
+    padding: 10px 16px;
 
     border: 1px solid rgba(139, 94, 60, 0.25);
     border-radius: 14px;
@@ -127,20 +142,13 @@
     font: inherit;
     text-decoration: none;
 
-    box-shadow: 0 20px 50px rgba(0,0,0,.55);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
 
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
         background-color 0.25s ease,
         border-color 0.25s ease;
-}
-
-.contactButton:hover {
-    border-color: rgba(139, 94, 60, 0.45);
-    background-color: #f8f4ec;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(63, 51, 40, 0.12);
 }
 
 .contactButtonIcon {
@@ -150,13 +158,14 @@
 
     flex-shrink: 0;
 
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
 
     border-radius: 50%;
 }
 
 .telegramIcon {
+    padding-right: 8px;
     background-color: #2aabee;
 }
 
@@ -169,66 +178,64 @@
 }
 
 .messenger {
-    width: 28px;
-    height: 28px;
+    width: 27px;
+    height: 27px;
+
     color: #fff;
 }
 
-.contactButtonText{
+.contactButtonText {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2px;
 }
 
-.contactButtonTitle{
+.contactButtonTitle {
     font-size: 15px;
     font-weight: 600;
 }
 
-.contactButtonSubtitle{
+.contactButtonSubtitle {
+    color: #5f5144;
+
     font-size: 13px;
     font-weight: 400;
-    color: #5f5144;
 }
 
-.afterContactButtonBox{
+.afterContactButtonBox {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
+
     margin-bottom: 32px;
 }
 
-.iconShield{
+.iconShield {
     width: 20px;
     height: 20px;
-    fill: #8b5e3c;
-}
 
-.description2{
-    color: #8b5e3c;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    fill: #8b5e3c;
 }
 
 /* Форма */
 
 .form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 20px;
 
-    padding: 40px;
+    padding: 22px 16px;
 
     border: 1px solid rgba(139, 94, 60, 0.15);
-    border-radius: 20px;
+    border-radius: 16px;
 
     background-color: #f8f4ec;
+
     box-shadow:
-        0 20px 50px rgba(0,0,0,.55);
+        0 20px 50px rgba(0, 0, 0, 0.55);
 }
 
 .field {
@@ -245,6 +252,7 @@
 
 .field label {
     color: #44372b;
+
     font-size: 15px;
     font-weight: 600;
 }
@@ -253,13 +261,19 @@
     color: #a0523b;
 }
 
+/* Input wrapper */
+
+.inputWrapper {
+    position: relative;
+}
+
 /* Поля */
 
 .field input,
 .field select,
 .field textarea {
     width: 100%;
-    padding: 14px 16px;
+    padding: 14px 16px 14px 52px;
 
     border: 1px solid #c8bba5;
     border-radius: 10px;
@@ -282,19 +296,213 @@
     color: #9b9083;
 }
 
+/* Іконки */
+
+.inputIcon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+
+    width: 20px;
+    height: 20px;
+
+    fill: #9b9083;
+
+    transform: translateY(-50%);
+}
+
+.textareaIcon {
+    top: 16px;
+    transform: none;
+}
+
 /* Focus */
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
     border-color: #a0523b;
-    box-shadow: 0 0 0 3px rgba(160, 82, 59, 0.1);
+
+    box-shadow:
+        0 0 0 3px rgba(160, 82, 59, 0.1);
+}
+
+/* Помилка валідації */
+
+.inputError input,
+.inputError select,
+.inputError textarea {
+    border-color: #c94a4a;
+}
+
+.inputError input:focus,
+.inputError select:focus,
+.inputError textarea:focus {
+    border-color: #c94a4a;
+
+    box-shadow:
+        0 0 0 3px rgba(201, 74, 74, 0.12);
+}
+
+.inputError .inputIcon {
+    fill: #c94a4a;
+}
+
+.fieldError {
+    margin: 0;
+
+    color: #c94a4a;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 /* Select */
 
 .field select {
     cursor: pointer;
+    appearance: none;
+    padding-right: 45px;
+}
+
+.inputWrapper:has(select)::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 18px;
+
+    width: 8px;
+    height: 8px;
+
+    border-right: 2px solid #8b7b6b;
+    border-bottom: 2px solid #8b7b6b;
+
+    transform: translateY(-65%) rotate(45deg);
+
+    pointer-events: none;
+}
+
+/* Месенджер */
+
+.messengerField {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+}
+
+.messengerField legend {
+    margin-bottom: 12px;
+
+    color: #44372b;
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.messengerField legend span {
+    color: #a0523b;
+}
+
+.messengerOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.messengerOption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+
+    border: 1px solid #c8bba5;
+    border-radius: 10px;
+
+    background-color: #fff;
+    color: #44372b;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.messengerOption input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.radioCircle {
+    position: relative;
+
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    border: 2px solid #9b9083;
+    border-radius: 50%;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.messengerOption:has(input:checked) {
+    border-color: #a0523b;
+    background-color: #faf5ee;
+}
+
+.messengerOption:has(input:checked) .radioCircle {
+    border-color: #a0523b;
+}
+
+.messengerOption:has(input:checked) .radioCircle::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background-color: #a0523b;
+
+    transform: translate(-50%, -50%);
+}
+
+.messengerOption:hover {
+    border-color: #a0523b;
+}
+
+.messengerError .messengerOption {
+    border-color: #c94a4a;
+}
+
+.messengerError .messengerOption:has(input:checked) {
+    border-color: #c94a4a;
+}
+
+.messengerError .radioCircle {
+    border-color: #c94a4a;
 }
 
 /* Textarea */
@@ -309,9 +517,8 @@
 .submit {
     grid-column: 1 / -1;
 
-    justify-self: center;
-
-    min-width: 230px;
+    width: 100%;
+    min-width: 0;
     padding: 15px 30px;
 
     border: none;
@@ -326,13 +533,13 @@
 
     cursor: pointer;
 
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.55);
+
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
-        background-color 0.25s ease,
-        border-color 0.25s ease;
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.55);
+        background-color 0.25s ease;
 }
 
 .submit:hover {
@@ -348,6 +555,7 @@
 .submit:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+
     transform: none;
     box-shadow: none;
 }
@@ -359,7 +567,6 @@
     grid-column: 1 / -1;
 
     margin: 0;
-
     padding: 14px 18px;
 
     border-radius: 10px;
@@ -378,66 +585,253 @@
     color: #8b3f30;
 }
 
-/* Планшет */
 
-@media (max-width: 700px) {
+.afterFormBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 60px;
+}
+
+.description2 {
+    color: #8b5e3c;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Контакти */
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+.contactButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+
+    width: 100%;
+    min-height: 70px;
+    padding: 10px 16px;
+
+    border: 1px solid rgba(139, 94, 60, 0.25);
+    border-radius: 14px;
+
+    background-color: rgba(248, 244, 236, 0.65);
+    color: #44372b;
+
+    font: inherit;
+    text-decoration: none;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.contactButton:hover {
+    border-color: rgba(139, 94, 60, 0.45);
+    background-color: #f8f4ec;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(63, 51, 40, 0.12);
+}
+
+.contactButtonIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+}
+
+.telegramIcon {
+    padding-right: 8px;
+    background-color: #2aabee;
+}
+
+.viberIcon {
+    background-color: #7360f2;
+}
+
+.whatsappIcon {
+    background-color: #25d366;
+}
+
+.messenger {
+    width: 27px;
+    height: 27px;
+
+    color: #fff;
+}
+
+.contactButtonText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.contactButtonTitle {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.contactButtonSubtitle {
+    color: #5f5144;
+
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.afterContactButtonBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 32px;
+}
+
+.iconShield {
+    width: 20px;
+    height: 20px;
+
+    fill: #8b5e3c;
+}
+
+.description3 {
+    color: #8b5e3c;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+    .section::after {
+        display: block;
+    }
+}
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (min-width: 701px) {
     .section {
         padding: 70px 16px;
     }
 
+    .section::after {
+        width: 300px;
+        height: 250px;
+    }
+
     .header {
+        gap: 24px;
         margin-bottom: 35px;
     }
 
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .dividerContainer {
+        gap: 12px;
+    }
+
+    .divider {
+        width: 120px;
+        height: 4px;
+    }
+
+    .icon_fire {
+        width: 24px;
+        height: 24px;
+    }
+
     .description {
-        font-size: 16px;
+        font-size: 18px;
     }
 
-    .form {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 25px 20px;
-    }
-
-    .fullWidth,
-    .submit,
-    .success,
-    .error {
-        grid-column: auto;
-    }
-
-    .submit {
-        width: 100%;
-    }
-}
-
-/* Маленькі телефони */
-
-@media (max-width: 400px) {
-    .section {
-        padding: 60px 12px;
-    }
-
-    .form {
-        padding: 22px 16px;
-        border-radius: 16px;
-    }
-
-    .title {
-        font-size: 32px;
-    }
-}
-
-@media (min-width: 701px) {
     .contacts {
         flex-direction: row;
         justify-content: center;
         gap: 12px;
+
         margin-bottom: 40px;
     }
 
     .contactButton {
         width: auto;
         min-width: 130px;
+    }
+
+    .form {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+
+        padding: 40px;
+
+        border-radius: 20px;
+    }
+
+    .messengerOptions {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .messengerOption {
+        width: auto;
+        flex: 1;
+    }
+
+    .submit {
+        width: auto;
+        min-width: 230px;
+
+        justify-self: center;
+    }
+}
+
+
+/* ========================================
+   LARGE DESKTOP
+   ======================================== */
+
+@media (min-width: 1024px) {
+    .section {
+        padding: 100px 20px;
+    }
+
+    .section::after {
+        width: 380px;
+        height: 320px;
+    }
+
+    .title {
+        font-size: 36px;
     }
 }
