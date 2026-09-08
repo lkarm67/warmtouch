@@ -6,13 +6,15 @@ import Portfolio from "@/components/Portfolio/Portfolio";
 import Reviews from "@/components/Reviews/Reviews";
 import Services from "@/components/Services/Services";
 import ContactForm from '@/components/ContactForm/ContactForm';
+import Footer from "@/components/Footer/Footer";
 
 
 export default function Home() {
     return (
         <>
+            <Header />
+            
             <main>
-                <Header />
                 <Hero />
                 <About />
                 <Services />
@@ -20,7 +22,10 @@ export default function Home() {
                 <FAQ />
                 <Reviews />
                 <ContactForm />
+                
             </main>
+            
+            <Footer />
         </>
     );
 }

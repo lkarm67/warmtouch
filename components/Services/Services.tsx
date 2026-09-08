@@ -38,7 +38,7 @@ export default function Services() {
   const closeModal = () => setActiveService(null);
  
   return (
-    <section className={css.services + ' container'}>
+    <section className={css.services + ' container'} id="services">
       <h2 className={css.title}>Послуги</h2>
  
       <div className={css.dividerContainer}>

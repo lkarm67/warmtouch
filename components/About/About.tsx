@@ -10,8 +10,9 @@ const marck = Marck_Script({
 
 export default function About() {
     return (
-        <section className={css.about + ' container'}>
-            <div className={css.aboutIntro}>
+        <section className={css.about} id="about">
+            <div className={css.container}>
+              <div className={css.aboutIntro}>
                 <div className={css.imageWrapper}>
                     <Image 
                         src="/images/about_td.jpeg" 
@@ -75,8 +76,8 @@ export default function About() {
                         </li>
                     </ul>    
                 </div>
-            </div>
-            <div className={css.infoAdvantages}>
+              </div>
+              <div className={css.infoAdvantages}>
                 <h3 className={css.infoAdvantagesTitle}>Чому мені довіряють</h3>
                 <div className={css.infoAdvantageBlock}>
                     <div className={css.infoBlock}>
@@ -138,6 +139,7 @@ export default function About() {
 
                     </div>
                 </div>              
+              </div>
             </div>   
         </section>
     );

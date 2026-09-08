@@ -156,7 +156,7 @@ export default function ContactForm() {
     }
 
     return (
-        <section className={css.section} id="contact-form">
+        <section className={css.section} id="contacts">
             <div className={css.container}>
 
                 <div className={css.header}>

@@ -1,181 +1,265 @@
 .about {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  min-height: 100vh;
-  background: #e4d6bc;
-  padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 70px 20px;
+    background: #e4d6bc;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* =========================
+   ABOUT INTRO
+========================= */
 
 .aboutIntro {
     display: flex;
-    flex-direction: row;
-    gap: 40px;
+    flex-direction: column;
+    gap: 35px;
     align-items: center;
 }
 
-.imageWrapper{
-    flex-shrink: 0;
-    width: 400px;
-    aspect-ratio: 4 / 5;
+.imageWrapper {
     position: relative;
+    flex-shrink: 0;
+    width: min(100%, 400px);
+    aspect-ratio: 4 / 5;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.55);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
 }
 
-.aboutImage { 
+.aboutImage {
     display: block;
-    border-radius: 12px;
-    width: 100%;
-    height: auto;
     object-fit: cover;
 }
+
+/* =========================
+   ABOUT CONTENT
+========================= */
 
 .aboutContent {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px 40px;
+    gap: 18px;
+    width: 100%;
+    padding: 0;
 }
 
-.title{
-    font-size: 36px;
+.title {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.25;
     font-weight: 700;
+    text-align: center;
     color: var(--bg-color);
 }
 
-.dividerContainer{
+/* =========================
+   DIVIDER
+========================= */
+
+.dividerContainer {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .divider {
-    width: 150px;
-    height: 4px;
+    flex: 1;
+    max-width: 150px;
+    height: 3px;
+    margin: 0;
     background-color: var(--accent-color);
     border: none;
     box-shadow:
-      0 4px 12px rgba(0, 0, 0, 0.25),
-      0 0 20px rgba(255, 140, 0, 0.25);
+        0 4px 12px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(255, 140, 0, 0.25);
 }
 
-.icon_fire{
-    width: 24px;
-    height: 24px;
+.icon_fire {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
     fill: var(--accent-color);
 }
- 
-.description{
-    font-size: 20px;
-    font-weight: 600;
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+    margin: 5px 0;
+    font-size: 17px;
     line-height: 1.6;
+    font-weight: 600;
     color: var(--bg-color);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
+/* =========================
+   STATISTICS
+========================= */
+
 .infoList {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 15px;
+    padding: 15px 0;
+    margin: 0;
 }
 
 .infoItem {
     display: flex;
     flex-direction: column;
     justify-content: center;
-     align-items: center;
+    align-items: center;
+    gap: 10px;
     text-align: center;
-    gap: 20px;
 }
 
 .aboutIcon {
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     fill: var(--accent-color);
 }
 
 .infoText {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 5px;
     color: var(--bg-color);
 }
 
 .infoSubtitle {
-    font-size: 24px;
+    margin: 0;
+    font-size: 21px;
+    line-height: 1.2;
     font-weight: 700;
     color: var(--bg-color);
 }
 
 .infoLabel {
-    font-size: 16px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.3;
     color: var(--bg-color);
 }
 
-.infoAdvantages{
-   display: flex;  
-   flex-direction: column;
-   align-items: center;
-   gap: 40px;
-}
+/* =========================
+   ADVANTAGES
+========================= */
 
-.infoAdvantagesTitle{
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--bg-color);
-}
-
-.infoAdvantageBlock{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 80px;
-}
-
-.infoBlock{
+.infoAdvantages {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 32px;
-    box-sizing: border-box;
+    align-items: center;
+    gap: 30px;
 }
 
-.infoAdvantagesList{
+.infoAdvantagesTitle {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.3;
+    font-weight: 700;
+    text-align: center;
+    color: var(--bg-color);
+}
+
+.infoAdvantageBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+
+/* =========================
+   ADVANTAGES LIST
+========================= */
+
+.infoBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.infoAdvantagesList {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    width: min(100%, 360px);
+    margin: 0;
+    padding: 0;
 }
 
-.infoAdvantageItem{
+.infoAdvantageItem {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 14px;
     background-color: #d9c9ae;
     border-radius: 8px;
-    padding: 16px;
-    min-width: 320px;
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.55);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
-.infoIcon{
-    width: 40px;
-    height: 40px;
+.infoIcon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
     fill: var(--accent-color);
 }
 
-.infoAdvantageText{
-    font-size: 24px;
+.infoAdvantageText {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.3;
     color: var(--bg-color);
 }
+
+/* =========================
+   CTA BUTTON
+========================= */
+
+.ctaBtn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+
+    padding: 14px 24px;
+
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   QUOTE
+========================= */
 
 .infoTrustReasons {
     position: relative;
@@ -185,10 +269,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
 
-    min-width: 320px;
-    padding: 32px 80px;
+    width: min(100%, 360px);
+    min-width: 0;
+    box-sizing: border-box;
+
+    gap: 10px;
+    padding: 35px 25px;
+    margin: 0 auto;
 
     border-radius: 12px;
 
@@ -196,8 +284,7 @@
     background-size: cover;
     background-position: center;
 
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.55);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
 }
 
 .overlay {
@@ -219,9 +306,12 @@
 
 .infoTrustReason {
     max-width: 300px;
+    margin: 0;
+
     text-align: center;
-    font-size: 20px;
-    line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.6;
+
     color: var(--text-color);
 }
 
@@ -229,33 +319,37 @@
     content: "❝";
     position: absolute;
 
-    left: -18px;
-    top: -8px;
+    left: -15px;
+    top: -7px;
 
-    font-size: 36px;
+    font-size: 32px;
     line-height: 1;
+
     color: var(--text-color);
 }
 
 .infoTrustReason::after {
     content: "❞";
+
     color: var(--text-color);
-    font-size: 36px;
+    font-size: 32px;
     line-height: 0;
-    margin-left: 14px;
-    vertical-align: -6px;
+
+    margin-left: 10px;
+    vertical-align: -5px;
 }
 
 .qouteDividerContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .qouteDivider {
-    width: 50px;
+    width: 40px;
     height: 1px;
+    margin: 0;
     background-color: var(--text-color);
     border: none;
 }
@@ -267,31 +361,289 @@
 }
 
 .infoLogo {
+    margin: 0;
     font-family: 'Marck Script', cursive;
     font-size: 20px;
     letter-spacing: 1px;
 }
 
-.ctaBtn {
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 8px;
-    padding: 14px 32px;
-    font-size: 18px;
-    font-weight: 600;
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background-color 0.25s ease,
-        border-color 0.25s ease;
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.55);
+
+/* =========================
+   TABLET — 768px
+========================= */
+
+@media screen and (min-width: 768px) {
+
+    .about {
+        padding: 80px 40px;
+    }
+
+    .container {
+        gap: 60px;
+    }
+
+    /* Фото зверху */
+    .aboutIntro {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .imageWrapper {
+        width: 360px;
+    }
+
+    /* Текст під фото */
+    .aboutContent {
+        width: 100%;
+        max-width: 760px;
+        padding: 0;
+    }
+
+    .title {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .dividerContainer {
+        justify-content: center;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* Статистика */
+    .infoList {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .infoItem {
+        gap: 12px;
+    }
+
+    .infoSubtitle {
+        font-size: 21px;
+    }
+
+    .infoLabel {
+        font-size: 15px;
+    }
+
+    /* =========================
+       ADVANTAGES
+    ========================= */
+
+    .infoAdvantages {
+        width: 100%;
+        gap: 35px;
+    }
+
+    .infoAdvantagesTitle {
+        font-size: 27px;
+    }
+
+    .infoAdvantageBlock {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .infoBlock {
+        width: 100%;
+        align-items: center;
+        gap: 28px;
+    }
+
+    /* 2 переваги в ряд */
+    .infoAdvantagesList {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        max-width: 760px;
+        gap: 18px;
+    }
+
+    .infoAdvantageItem {
+        min-width: 0;
+        width: 100%;
+        padding: 16px;
+    }
+
+    .infoIcon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .infoAdvantageText {
+        font-size: 18px;
+    }
+
+    /* Кнопка */
+    .ctaBtn {
+        width: auto;
+        max-width: none;
+    }
+
+    /* Цитата */
+    .infoTrustReasons {
+        width: 100%;
+        max-width: 760px;
+        min-width: 0;
+        margin: 0 auto;
+        padding: 40px 60px;
+    }
 }
 
-.ctaBtn:hover,
-.ctaBtn:focus {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(160, 82, 59, 0.2);
-    background-color: var(--accent-hover);
-} 
+/* =========================
+   DESKTOP — 1024px
+========================= */
+
+@media screen and (min-width: 1200px) {
+
+    .about {
+        gap: 60px;
+        padding: 100px 80px;
+    }
+
+    .container {
+        gap: 40px;
+    }
+
+    .aboutIntro {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .imageWrapper {
+        width: 400px;
+    }
+
+    .aboutContent {
+        padding: 20px 40px;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 36px;
+        text-align: left;
+    }
+
+    .dividerContainer{
+        justify-content: flex-start;
+    }
+
+    .description {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .infoList {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+
+    .infoItem {
+        gap: 20px;
+    }
+
+    .aboutIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .infoText {
+        gap: 12px;
+    }
+
+    .infoSubtitle {
+        font-size: 24px;
+    }
+
+    .infoLabel {
+        font-size: 16px;
+    }
+
+    .infoAdvantages {
+        gap: 40px;
+    }
+
+    .infoAdvantagesTitle {
+        font-size: 28px;
+    }
+
+    .infoAdvantageBlock {
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    .infoBlock {
+        align-items: start;
+        justify-content: start;
+        gap: 32px;
+        box-sizing: border-box;
+    }
+
+    .infoAdvantagesList {
+        gap: 24px;
+    }
+
+    .infoAdvantageItem {
+        min-width: 320px;
+        padding: 16px;
+    }
+
+    .infoIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .infoAdvantageText {
+        font-size: 20px;
+    }
+
+    .infoTrustReasons {
+        max-width: 400px;
+        padding: 32px 40px 24px 40px;
+    }
+
+    .infoTrustReason {
+        font-size: 20px;
+        line-height: 1.7;
+    }
+
+    .ctaBtn {
+        padding: 14px 32px;
+        font-size: 18px;
+    }
+}
+
+
+/* =========================
+   HOVER — DESKTOP ONLY
+========================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .ctaBtn {
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            background-color 0.25s ease;
+    }
+
+    .ctaBtn:hover,
+    .ctaBtn:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(160, 82, 59, 0.2);
+        background-color: var(--accent-hover);
+    }
+}

@@ -1,0 +1,143 @@
+.footer {
+    width: 100%;
+    background-color: #252424;
+    padding: 36px 20px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    line-height: 0;
+
+    transition: opacity 0.25s ease;
+}
+
+.logo:hover,
+.logo:focus {
+    opacity: 0.8;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    color: var(--text-color);
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.socialLink:hover,
+.socialLink:focus {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.messenger {
+    width: 28px;
+    height: 28px;
+
+    fill: currentColor;
+}
+
+/* Copyright */
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 28px;
+}
+
+.bottom p {
+    color: var(--text-color);
+    font-size: 12px;
+    line-height: 1.5;
+
+    opacity: 0.5;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 40px 32px 20px;
+    }
+
+    .content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 30px;
+
+        text-align: left;
+    }
+
+    .socials {
+        gap: 16px;
+    }
+
+    .bottom {
+        margin-top: 24px;
+    }
+}
+
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+@media (min-width: 1024px) {
+    .footer {
+        padding: 32px 80px 18px;
+    }
+
+    .content {
+        gap: 40px;
+    }
+
+    .socialLink {
+        width: 38px;
+        height: 38px;
+    }
+
+    .messenger {
+        width: 30px;
+        height: 30px;
+    }
+
+    .bottom {
+        margin-top: 20px;
+    }
+}

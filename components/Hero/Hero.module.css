@@ -1,7 +1,270 @@
 .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
+/* Картинка як фон на мобільному */
+.heroImage {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-image: url('/images/hero_td.jpg');
+    background-size: cover;
+    background-position: 65% center;
+
+    /* затемнення зліва, щоб текст добре читався */
+    mask-image: none;
+    -webkit-mask-image: none;
+}
+
+.heroImage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.82) 0%,
+        rgba(0, 0, 0, 0.58) 45%,
+        rgba(0, 0, 0, 0.15) 100%
+    );
+}
+
+.heroTextWrapper {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    min-height: 100svh;
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    color: var(--text-color);
+}
+
+.title {
+    max-width: 700px;
+
+    margin: 0 0 20px;
+
+    font-size: 32px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.highlight {
+    color: var(--accent-color);
+
+    text-shadow: 0 0 10px rgba(255, 140, 0, 0.2);
+}
+
+.subtitle {
+    max-width: 600px;
+
+    margin: 0 0 8px;
+
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.ctaButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    max-width: 320px;
+
+    gap: 14px;
+    margin-top: 28px;
+
+    font-size: 16px;
+    line-height: 1;
+}
+
+.primaryBtn,
+.secondaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    border-radius: 8px;
+    padding: 14px 20px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.primaryBtn {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(255, 140, 0, 0.25);
+}
+
+.secondaryBtn {
+    background-color: #252424;
+    color: var(--text-color);
+    border: 1px solid #3a3939;
+}
+
+.primaryBtn:active,
+.secondaryBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.primaryBtn:focus-visible,
+.secondaryBtn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .primaryBtn:hover,
+    .secondaryBtn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .primaryBtn:hover {
+        background-color: var(--accent-hover);
+    }
+
+    .secondaryBtn:hover {
+        background-color: #3d3434;
+        border-color: #3a3939;
+    }
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media screen and (min-width: 768px) {
+    .hero {
+        min-height: 100vh;
+    }
+
+    .heroTextWrapper {
+        width: 60%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .heroText {
+        min-height: 100vh;
+        padding-top: 150px;
+        padding-left: 44px;
+        padding-bottom: 70px;
+    }
+
+    .title {
+        font-size: 38px;
+    }
+
+    .subtitle {
+        font-size: 19px;
+    }
+
+    .ctaButtons {
+        flex-direction: row;
+        align-items: center;
+
+        width: auto;
+        max-width: none;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        width: auto;
+        white-space: nowrap;
+    }
+}
+
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+@media screen and (min-width: 1024px) {
+    .heroTextWrapper {
+        width: 60%;
+    }
+
+    .heroImage {
+        inset: 0 0 0 40%;
+
+        background-position: right center;
+
+        mask-image: linear-gradient(
+            to left,
+            black 10%,
+            transparent 100%
+        );
+
+        -webkit-mask-image: linear-gradient(
+            to left,
+            black 10%,
+            transparent 100%
+        );
+    }
+
+    .heroImage::after {
+        display: none;
+    }
+
+    .heroText {
+        padding-top: 180px;
+    }
+
+    .title {
+        font-size: 42px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1340px) {
+    .subtitle {
+        max-width: none;
+        white-space: nowrap;
+    }
+}
+
+
+
+
+/*.hero {
   display: flex;
   min-height: 100vh;
-  background: #2e2d2d;
+  background: var(--bg-color);
 }
 
 .heroTextWrapper {
@@ -113,4 +376,4 @@
     black 10%,
     transparent 100%
   );
-}
+}*/
