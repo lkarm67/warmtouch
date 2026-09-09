@@ -24,8 +24,9 @@
 .title {
     margin-bottom: 18px;
 
-    font-size: 30px;
+    font-size: clamp(28px, 6vw, 32px);
     font-weight: 700;
+    line-height: 1.2;
 
     color: var(--bg-color);
 }
@@ -34,17 +35,18 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 
     width: 100%;
     max-width: 360px;
 
-    gap: 10px;
+    gap: clamp(8px, 2vw, 12px);
 }
 
 .divider {
-    flex: 1;
-
-    height: 3px;
+    flex-shrink: 1;
+    width: clamp(50px, 18vw, 150px);
+    height: clamp(2px, 0.4vw, 4px);
 
     background-color: var(--accent-color);
     border: none;
@@ -57,8 +59,8 @@
 .icon_fire {
     flex-shrink: 0;
 
-    width: 22px;
-    height: 22px;
+    width: clamp(20px, 4vw, 24px);
+    height: clamp(20px, 4vw, 24px);
 
     fill: var(--accent-color);
 }
@@ -298,16 +300,16 @@
     }
 
     .title {
-        font-size: 34px;
+        font-size: clamp(32px, 5vw, 36px);
     }
 
-    .dividerContainer {
+    /*.dividerContainer {
         max-width: 420px;
-    }
+        gap: clamp(10px, 2vw, 12px);
+    } */
 
     .servicesList {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        max-width: 100%;
         gap: 28px;
 
         margin-top: 40px;
@@ -345,26 +347,12 @@
         margin-bottom: 24px;
     }
 
-    .dividerContainer {
-        max-width: 420px;
-
-        gap: 12px;
-    }
-
-    .divider {
-        height: 4px;
-    }
-
-    .icon_fire {
-        width: 24px;
-        height: 24px;
-    }
-
     .servicesList {
         grid-template-columns: repeat(4, minmax(0, 1fr));
-
+        
         gap: 32px;
         width: 100%;
+        max-width: none;
 
         margin-top: 40px;
     }

@@ -61,21 +61,22 @@
 
     color: #3f3328;
 
-    font-size: 32px;
+    font-size: clamp(28px, 6vw, 32px);
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 .dividerContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: clamp(8px, 2vw, 12px);
 }
 
 .divider {
-    width: 80px;
-    height: 3px;
+    width: clamp(50px, 18vw, 150px);
+    height: clamp(2px, 0.4vw, 4px);
+    flex-shrink: 1;
 
     border: none;
 
@@ -87,8 +88,8 @@
 }
 
 .icon_fire {
-    width: 22px;
-    height: 22px;
+    width: clamp(20px, 4vw, 24px);
+    height: clamp(20px, 4vw, 24px);
 
     fill: var(--accent-color);
 }
@@ -101,123 +102,6 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 1.6;
-}
-
-.description2 {
-    color: #8b5e3c;
-
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-/* Контакти */
-
-.contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-    margin-bottom: 30px;
-}
-
-.contactButton {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 14px;
-
-    width: 100%;
-    min-height: 70px;
-    padding: 10px 16px;
-
-    border: 1px solid rgba(139, 94, 60, 0.25);
-    border-radius: 14px;
-
-    background-color: rgba(248, 244, 236, 0.65);
-    color: #44372b;
-
-    font: inherit;
-    text-decoration: none;
-
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background-color 0.25s ease,
-        border-color 0.25s ease;
-}
-
-.contactButtonIcon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex-shrink: 0;
-
-    width: 46px;
-    height: 46px;
-
-    border-radius: 50%;
-}
-
-.telegramIcon {
-    padding-right: 8px;
-    background-color: #2aabee;
-}
-
-.viberIcon {
-    background-color: #7360f2;
-}
-
-.whatsappIcon {
-    background-color: #25d366;
-}
-
-.messenger {
-    width: 27px;
-    height: 27px;
-
-    color: #fff;
-}
-
-.contactButtonText {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-}
-
-.contactButtonTitle {
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.contactButtonSubtitle {
-    color: #5f5144;
-
-    font-size: 13px;
-    font-weight: 400;
-}
-
-.afterContactButtonBox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
-    margin-bottom: 32px;
-}
-
-.iconShield {
-    width: 20px;
-    height: 20px;
-
-    fill: #8b5e3c;
 }
 
 /* Форма */
@@ -296,6 +180,15 @@
     color: #9b9083;
 }
 
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: #a0523b;
+
+    box-shadow:
+        0 0 0 3px rgba(160, 82, 59, 0.1);
+}
+
 /* Іконки */
 
 .inputIcon {
@@ -314,17 +207,6 @@
 .textareaIcon {
     top: 16px;
     transform: none;
-}
-
-/* Focus */
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-    border-color: #a0523b;
-
-    box-shadow:
-        0 0 0 3px rgba(160, 82, 59, 0.1);
 }
 
 /* Помилка валідації */
@@ -489,10 +371,6 @@
     transform: translate(-50%, -50%);
 }
 
-.messengerOption:hover {
-    border-color: #a0523b;
-}
-
 .messengerError .messengerOption {
     border-color: #c94a4a;
 }
@@ -540,12 +418,6 @@
         transform 0.25s ease,
         box-shadow 0.25s ease,
         background-color 0.25s ease;
-}
-
-.submit:hover {
-    background-color: var(--accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(160, 82, 59, 0.2);
 }
 
 .submit:active {
@@ -644,13 +516,6 @@
         border-color 0.25s ease;
 }
 
-.contactButton:hover {
-    border-color: rgba(139, 94, 60, 0.45);
-    background-color: #f8f4ec;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(63, 51, 40, 0.12);
-}
-
 .contactButtonIcon {
     display: flex;
     align-items: center;
@@ -729,6 +594,16 @@
     text-transform: uppercase;
 }
 
+.contactButton:focus-visible,
+.messengerOption:focus-visible,
+.submit:focus-visible {
+    outline: none;
+    border-color: #a0523b;
+
+    box-shadow:
+        0 0 0 3px rgba(160, 82, 59, 0.15);
+}
+
 @media (min-width: 600px) {
     .section::after {
         display: block;
@@ -756,20 +631,6 @@
 
     .subtitle {
         font-size: 15px;
-    }
-
-    .dividerContainer {
-        gap: 12px;
-    }
-
-    .divider {
-        width: 120px;
-        height: 4px;
-    }
-
-    .icon_fire {
-        width: 24px;
-        height: 24px;
     }
 
     .description {
@@ -833,5 +694,29 @@
 
     .title {
         font-size: 36px;
+    }
+}
+
+/* ========================================
+   HOVER / FOCUS — DESKTOP ONLY
+======================================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .contactButton:hover {
+        border-color: rgba(139, 94, 60, 0.45);
+        background-color: #f8f4ec;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(63, 51, 40, 0.12);
+    }
+
+    .messengerOption:hover {
+        border-color: #a0523b;
+    }
+
+    .submit:hover {
+        background-color: var(--accent-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(160, 82, 59, 0.2);
     }
 }

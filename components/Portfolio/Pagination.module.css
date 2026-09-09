@@ -1,88 +1,85 @@
 .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(6px, 2vw, 10px);
-  width: 100%;
-  margin-top: clamp(24px, 6vw, 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+    margin-top: 24px;
 }
 
 .pages {
-  display: flex;
-  align-items: center;
-  gap: clamp(4px, 1.5vw, 8px);
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .paginationButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
 
-  flex-shrink: 0;
-  padding: 0;
+    padding: 0;
 
-  border: 1px solid #b89b72;
-  border-radius: 4px;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
 
-  background-color: transparent;
-  color: #e4d6bc;
+    background-color: transparent;
+    color: var(--text-color);
 
-  font-size: clamp(14px, 4vw, 16px);
-  font-weight: 500;
-  line-height: 1;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  transition:
-    background-color 250ms ease,
-    color 250ms ease,
-    border-color 250ms ease,
-    transform 250ms ease;
-}
-
-.paginationButton:hover:not(:disabled) {
-  background-color: #b86b3c;
-  border-color: #b86b3c;
-  color: #e4d6bc;
-}
-
-.paginationButton:focus-visible {
-  outline: 2px solid #b86b3c;
-  outline-offset: 3px;
+    transition:
+        background-color 250ms ease,
+        color 250ms ease,
+        border-color 250ms ease,
+        transform 250ms ease;
 }
 
 .activePage {
-  background-color: #b86b3c;
-  border-color: #b86b3c;
-  color: #e4d6bc;
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--text-color);
 }
 
 .paginationButton:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
+    opacity: 0.4;
+    cursor: not-allowed;
 }
 
-@media (min-width: 480px) {
-  .pagination {
-    gap: 8px;
-  }
-
-  .pages {
-    gap: 6px;
-  }
+.paginationButton:focus-visible {
+    outline: 2px solid var(--accent-hover);
+    outline-offset: 3px;
 }
 
+
+/* TABLET */
 @media (min-width: 768px) {
-  .pagination {
-    margin-top: 32px;
-  }
+    .pagination {
+        margin-top: 32px;
+    }
 }
 
-@media (min-width: 1024px) {
-  .pagination {
-    margin-top: 40px;
-  }
+
+/* DESKTOP */
+@media (min-width: 1200px) and (hover: hover) and (pointer: fine) {
+    .paginationButton:hover:not(:disabled) {
+        background-color: var(--accent-hover);
+        border-color: var(--accent-hover);
+        color: var(--text-color);
+
+        transform: translateY(-2px);
+    }
 }
+
+
+
+
