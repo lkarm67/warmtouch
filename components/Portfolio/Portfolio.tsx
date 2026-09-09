@@ -137,13 +137,9 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <section
-      className={`${css.portfolio} container`}
-      id="portfolio"
-    >
-      <h2 className={css.title}>
-        Виконані роботи
-      </h2>
+  <section className={css.portfolio} id="portfolio">
+    <div className={css.container}> 
+      <h2 className={css.title}>Виконані роботи</h2>
 
       <div className={css.dividerContainer}>
         <hr className={css.divider} />
@@ -208,6 +204,7 @@ export default function Portfolio() {
           }
         }}
       />
-    </section>
+    </div>  
+  </section>
   );
 }

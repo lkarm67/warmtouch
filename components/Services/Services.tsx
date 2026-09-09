@@ -38,7 +38,8 @@ export default function Services() {
   const closeModal = () => setActiveService(null);
  
   return (
-    <section className={css.services + ' container'} id="services">
+  <section className={css.services} id="services">
+    <div className={css.container}>
       <h2 className={css.title}>Послуги</h2>
  
       <div className={css.dividerContainer}>
@@ -138,7 +139,8 @@ export default function Services() {
           </div>
         </div>
       )}
-    </section>
+    </div>
+  </section>
   );
 };
  

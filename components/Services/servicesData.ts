@@ -18,7 +18,7 @@ export const servicesData: Service[] = [
     image: '/images/services/pich.png',
     imageModal: '/images/projects/pich_kahel.jpg',
     title: 'Печі, груби під ключ',
-    shortDescription: 'Будівництво опалювальних печей та груб будь-якої складності.',
+    shortDescription: 'Будівництво печей та груб.',
     fullDescription:
       'Будую опалювальні печі й груби з урахуванням площі, планування будинку та ваших побажань. Кладу класичні «голландки», «шведки», кахельні груби та комбіновані варіанти з духовкою чи лежанкою.',
     features: [
@@ -41,9 +41,9 @@ export const servicesData: Service[] = [
     warranty: 'Гарантія на роботи — 1 рік',
   },
   {
-    id: 'fireplaces',
+    id: 'fireplaces', 
     image: '/images/services/kamin.png',
-    imageModal: '/images/projects/kamin_td.jpg',
+    imageModal: '/images/portfolio/kamin/kamin_6.jpg',
     title: 'Каміни',
     shortDescription: 'Будівництво камінів для будинків та дач.',
     fullDescription:
@@ -99,7 +99,7 @@ export const servicesData: Service[] = [
     image: '/images/services/fixing.png',
     imageModal: '/images/projects/fixing_pich.jpg',
     title: 'Ремонт печей',
-    shortDescription: 'Ремонт, чистка та реставрація печей.',
+    shortDescription: 'Ремонт, чистка та реконструкція печей.',
     fullDescription:
       'Діагностую та усуваю причини поганої тяги, диму в приміщенні, тріщин у кладці. Чищу димоходи, перекладаю пошкоджені ділянки.',
     features: [
