@@ -152,11 +152,6 @@
         transform 0.25s ease;
 }
 
-.navLink:hover,
-.navLink:focus {
-    color: var(--accent-color);
-}
-
 .navLink::after {
     content: "";
 
@@ -172,11 +167,17 @@
     transition: width 0.3s ease;
 }
 
-.navLink:hover::after,
-.navLink:focus::after {
-    width: 100%;
-}
+@media (hover: hover) and (pointer: fine) {
+    .navLink:hover,
+    .navLink:focus-visible {
+        color: var(--accent-color);
+    }
 
+    .navLink:hover::after,
+    .navLink:focus-visible::after {
+        width: 100%;
+    }
+}
 
 /* =========================
    CTA
@@ -331,15 +332,15 @@
             background-color 0.25s ease;
     }
 
+    @media (hover: hover) and (pointer: fine) {
     .ctaBtnDesktop:hover,
-    .ctaBtnDesktop:focus {
+    .ctaBtnDesktop:focus-visible {
         transform: translateY(-3px);
-
         background-color: var(--accent-hover);
-
         box-shadow:
             0 8px 20px rgba(0, 0, 0, 0.35);
     }
+}
 }
 
 

@@ -52,7 +52,7 @@ export default function Header() {
 
                     <li className={css.navItem}>
                         <Link
-                            href="/#about"
+                            href="#about"
                             className={css.navLink}
                             onClick={closeMenu}
                         >
@@ -62,7 +62,7 @@ export default function Header() {
 
                     <li className={css.navItem}>
                         <Link
-                            href="/#services"
+                            href="#services"
                             className={css.navLink}
                             onClick={closeMenu}
                         >
@@ -72,7 +72,7 @@ export default function Header() {
 
                     <li className={css.navItem}>
                         <Link
-                            href="/#portfolio"
+                            href="#portfolio"
                             className={css.navLink}
                             onClick={closeMenu}
                         >
@@ -82,7 +82,7 @@ export default function Header() {
 
                     <li className={css.navItem}>
                         <Link
-                            href="/#faq"
+                            href="#faq"
                             className={css.navLink}
                             onClick={closeMenu}
                         >
@@ -92,7 +92,7 @@ export default function Header() {
 
                     <li className={css.navItem}>
                         <Link
-                            href="/#reviews"
+                            href="#reviews"
                             className={css.navLink}
                             onClick={closeMenu}
                         >
@@ -102,7 +102,7 @@ export default function Header() {
 
                     <li className={css.navItem}>
                         <Link
-                            href="/#contacts"
+                            href="#contacts"
                             className={css.navLink}
                             onClick={closeMenu}
                         >
