@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import css from './FireCursor.module.css';
 import FireIcon from './FireIcon';
 import CursorGlow from './CursorGlow';
@@ -7,7 +9,22 @@ import { useCursorPhysics } from './useCursorPhysics';
 import Sparks from './Sparks';
 
 export default function FireCursor() {
+    const [isTouchDevice, setIsTouchDevice] = useState(true);
 
+    useEffect(() => {
+        setIsTouchDevice(
+            window.matchMedia('(pointer: coarse)').matches
+        );
+    }, []);
+
+    if (isTouchDevice) {
+        return null;
+    }
+
+    return <FireCursorDesktop />;
+}
+
+function FireCursorDesktop() {
     const {
         mainRef,
         trail1Ref,
@@ -36,7 +53,7 @@ export default function FireCursor() {
             </div>
 
             <div ref={sparkRef} className={`${css.cursor} ${css.sparkLayer}`}>
-                <Sparks/>
+                <Sparks />
             </div>
         </>
     );
