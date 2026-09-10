@@ -52,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk" className={inter.variable}>
+    <html lang="uk" data-scroll-behavior="smooth" className={inter.variable}>
       <body>
         {children}
         <FireCursor />
