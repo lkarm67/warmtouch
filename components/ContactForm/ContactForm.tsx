@@ -534,9 +534,11 @@ export default function ContactForm() {
                     </div>
 
                     <div className={css.afterContactButtonBox}>
-                        <svg className={css.iconShield}>
-                            <use href="/icons.svg#icon-shield1"></use>
-                        </svg>
+                        <div className={css.shieldBox}>
+                            <svg className={css.iconShield}>
+                                <use href="/icons.svg#icon-shield1"></use>
+                            </svg>
+                        </div>
 
                         <p className={css.description3}>
                             Швидко. Зручно. Відповідаю особисто.
