@@ -608,46 +608,6 @@
     text-transform: uppercase;
 }
 
-/*.afterContactButtonBox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.shieldBox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    flex: 0 0 20px;
-}
-
-.iconShield {
-    display: block;
-    width: 20px;
-    height: 20px;
-
-    fill: #8b5e3c;
-}
-
-.description3 {
-    margin: 0;
-    color: #8b5e3c;
-
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    line-height: 1.4;
-    text-align: center;
-    text-transform: uppercase;
-}*/
-
 .contactButton:focus-visible,
 .messengerOption:focus-visible,
 .submit:focus-visible {

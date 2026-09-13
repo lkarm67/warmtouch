@@ -21,8 +21,7 @@ export default function Home() {
                 <Portfolio />
                 <FAQ />
                 <Reviews />
-                <ContactForm />
-                
+                <ContactForm />                
             </main>
             
             <Footer />

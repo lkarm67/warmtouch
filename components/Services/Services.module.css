@@ -303,11 +303,6 @@
         font-size: clamp(32px, 5vw, 36px);
     }
 
-    /*.dividerContainer {
-        max-width: 420px;
-        gap: clamp(10px, 2vw, 12px);
-    } */
-
     .servicesList {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 28px;
