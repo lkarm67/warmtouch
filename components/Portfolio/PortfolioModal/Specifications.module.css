@@ -8,10 +8,10 @@
 
 .term {
   font-weight: 600;
-  color: #6b5a47;
+  color: #9b5a32;
 }
 
 .value {
   margin: 0;
-  color: #2e2d2d;
+  color: var(--text-1);
 }

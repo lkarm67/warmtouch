@@ -3,7 +3,7 @@
     min-height: 100svh;
     display: flex;
     overflow: hidden;
-    background-color: var(--bg-color);
+    background-color: var(--bg-1);
 }
 
 /* Картинка як фон на мобільному */
@@ -51,7 +51,7 @@
     padding-top: 100px;
     padding-bottom: 50px;
 
-    color: var(--text-color);
+    color: var(--text-2);
 }
 
 .title {
@@ -118,7 +118,7 @@
 
 .primaryBtn {
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--text-2);
     border: none;
 
     box-shadow:
@@ -128,7 +128,7 @@
 
 .secondaryBtn {
     background-color: #252424;
-    color: var(--text-color);
+    color: var(--text-2);
     border: 1px solid #3a3939;
 }
 

@@ -24,8 +24,8 @@ body {
 
 body {
   font-family: var(--font-family);
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--bg-1);
+  color: var(--text-1);
   line-height: 1.5;
 }
 
@@ -89,7 +89,7 @@ button {
 
 .ctaBtn {
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--text-2-color);
     border: none;
     border-radius: 8px;
     padding: 8px 24px;
@@ -111,11 +111,36 @@ button {
     background-color: var(--accent-hover);
 } 
 
-:root {
+/*root {
   --bg-color: #2e2d2d;
   --text-color: #e4d6bc;
   --accent-color: #d8682e;
   --accent-hover: #b45309;
+}*/
+
+:root {
+  /* Backgrounds */
+  --header-bg: #252424;
+  --bg-1: #2e2d2d;
+  --bg-2: #e4d6bc;
+  --bg-3: #d9c9ae;
+
+  /* Text */
+  --text-1: #2e2d2d;
+  --text-2: #e4d6bc;
+
+  /* Accent */
+  --accent-color: #d8682e;
+  --accent-hover: #b45309;
+}
+
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-2: #292522;
+  --bg-3: #38312b;
+
+  /* Text */
+  --text-1: #e4d6bc;
 }
 
 :root {

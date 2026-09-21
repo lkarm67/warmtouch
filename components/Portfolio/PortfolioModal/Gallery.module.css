@@ -19,7 +19,7 @@
   border: none;
   border-radius: 18px;
 
-  background: #f4f4f4;
+  background: var(--bg-2);
 
   cursor: zoom-in;
 
@@ -78,7 +78,7 @@
   font-size: 0.9rem;
   font-style: italic;
 
-  color: #777;
+  color: #9b5a32;
 }
 
 /* =========================

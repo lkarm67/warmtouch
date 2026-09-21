@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import css from "./Header.module.css";
+import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,6 +24,11 @@ export default function Header() {
                     height={75}
                 />
             </Link>
+            
+            {/* THEME TOGGLE — MOBILE */}
+            <div className={css.themeToggleMobile}>
+                <ThemeToggle />
+            </div>
 
             {/* BURGER */}
             <button
@@ -36,7 +42,7 @@ export default function Header() {
                 <span></span>
                 <span></span>
             </button>
-
+          
             {/* NAVIGATION */}
             <nav className={`${css.nav} ${isMenuOpen ? css.navOpen : ""}`}>
                 <ul className={css.navList}>
@@ -124,6 +130,11 @@ export default function Header() {
                     </li>
                 </ul>
             </nav>
+
+            {/* THEME TOGGLE — DESKTOP */}
+            <div className={css.themeToggleDesktop}>
+                <ThemeToggle />
+            </div>
 
             {/* CTA для desktop */}
             <Link

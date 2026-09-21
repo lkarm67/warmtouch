@@ -1,6 +1,6 @@
 .reviews {
   padding: 64px 16px;
-  background-color: #d9c9ae;
+  background-color: var(--bg-3);
 }
 
 .container {
@@ -31,7 +31,7 @@
   font-weight: 700;
   line-height: 1.2;
 
-  color: #4a3728;
+  color: var(--text-1);
 }
 
 .dividerContainer {
@@ -74,7 +74,7 @@
   font-weight: 600;
   line-height: 1.6;
 
-  color: var(--bg-color);
+  color: var(--text-1);
 }
 
 /* ==================================================
@@ -145,7 +145,7 @@
 
   padding: 20px;
 
-  background-color: var(--text-color);
+  background-color: var(--bg-2);
 
   border-radius: 16px;
 
@@ -196,7 +196,7 @@
   font-size: 15px;
   line-height: 1.65;
 
-  color: var(--bg-color);
+  color: var(--text-1);
 }
 
 /* ==================================================
@@ -242,7 +242,7 @@
 
 .author strong {
   font-size: 16px;
-  color: var(--bg-color);
+  color: var(--text-1);
 }
 
 .author time {
@@ -317,7 +317,7 @@
   border: 1px solid var(--accent-color);
   border-radius: 50%;
 
-  background-color: var(--text-color);
+  background-color: var(--bg-2);
 
   cursor: pointer;
 
@@ -524,7 +524,7 @@
 
   .arrow:hover .arrowIcon,
   .arrow:focus-visible .arrowIcon {
-    border-color: var(--text-color);
+    border-color: var(--text-2);
   }
 
   .moreButton:hover,

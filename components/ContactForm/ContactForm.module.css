@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     padding: 60px 12px;
-    background-color: #e4d6bc;
+    background-color: var(--bg-2);
 }
 
 .section::after {
@@ -48,7 +48,7 @@
 .subtitle {
     margin-bottom: 8px;
 
-    color: #b45309;
+    color: var(--accent-hover);
 
     font-size: 14px;
     font-weight: 600;
@@ -59,7 +59,7 @@
 .title {
     margin: 0;
 
-    color: #3f3328;
+    color: var(--text-1);
 
     font-size: clamp(28px, 6vw, 32px);
     font-weight: 700;
@@ -97,7 +97,7 @@
 .description {
     margin: 0;
 
-    color: #5f5144;
+    color: var(--text-1);
 
     font-size: 16px;
     font-weight: 600;
@@ -403,7 +403,7 @@
     border-radius: 10px;
 
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--text-2);
 
     font: inherit;
     font-size: 16px;

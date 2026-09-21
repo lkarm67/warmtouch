@@ -7,7 +7,7 @@
     min-height: 100vh;
     padding: 70px 20px;
 
-    background-color: #d9c9ae;
+    background-color: var(--bg-3);
 }
 
 .container {
@@ -28,7 +28,7 @@
     font-weight: 700;
     line-height: 1.2;
 
-    color: var(--bg-color);
+    color: var(--text-1);
 }
 
 .dividerContainer {
@@ -83,7 +83,7 @@
 
     padding: 0 24px 24px 24px;;
 
-    background-color: #e4d6bc;
+    background-color: var(--bg-2);
 
     border-radius: 8px;
 
@@ -118,7 +118,7 @@
     font-size: 22px;
     font-weight: 700;
 
-    color: var(--bg-color);
+    color: var(--text-1);
 }
 
 .serviceDescription {
@@ -126,7 +126,7 @@
     font-weight: 500;
     line-height: 1.5;
 
-    color: var(--bg-color);
+    color: var(--text-1);
 }
 
 .detailsButton {
@@ -139,7 +139,7 @@
     border-radius: 4px;
 
     background: transparent;
-    color: var(--bg-color);
+    color: var(--text-1);
 
     font-size: 14px;
     font-weight: 500;
@@ -186,11 +186,11 @@
 
     padding: 32px 20px 24px;
 
-    background: #e4d6bc;
+    background: var(--bg-2);
 
     border-radius: 8px;
 
-    color: var(--bg-color);
+    color: var(--text-1);
 
     overflow-y: auto;
     overscroll-behavior: contain;
@@ -276,7 +276,7 @@
     padding: 12px 20px;
 
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--text-2);
 
     text-decoration: none;
     text-align: center;
@@ -374,7 +374,7 @@
     .detailsButton:hover,
     .detailsButton:focus-visible {
         background-color: var(--accent-hover);
-        color: var(--text-color);
+        color: var(--text-2);
 
         transform: translateY(-2px);
 

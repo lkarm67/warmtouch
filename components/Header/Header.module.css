@@ -6,7 +6,7 @@
 
     width: 100%;
 
-    background-color: #252424;
+    background-color: var(--header-bg);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
@@ -32,6 +32,16 @@
     display: block;
     width: 150px;
     height: auto;
+}
+
+.themeToggleMobile {
+    display: block;
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+.themeToggleDesktop {
+    display: none;
 }
 
 
@@ -65,7 +75,7 @@
     height: 2px;
     margin: 3px 0;
 
-    background-color: var(--text-color);
+    background-color: var(--text-2);
     border-radius: 2px;
 
     transition:
@@ -88,7 +98,6 @@
     transform: translateY(-8px) rotate(-45deg);
 }
 
-
 /* =========================
    NAVIGATION
 ========================= */
@@ -103,7 +112,7 @@
 
     padding: 30px 20px;
 
-    background-color: #252424;
+    background-color: var(--header-bg);
 
     transform: translateX(100%);
     visibility: hidden;
@@ -143,7 +152,7 @@
 
     padding: 5px 0;
 
-    color: var(--text-color);
+    color: var(--text-2);
     font-size: 16px;
     font-weight: 500;
 
@@ -196,13 +205,15 @@
     margin-top: 5px;
 }
 
+
+
 .ctaBtn {
     display: inline-block;
 
     padding: 9px 22px;
 
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--text-2);
 
     border-radius: 8px;
 
@@ -311,6 +322,15 @@
     .mobileCta {
         display: none;
     }
+    
+    .themeToggleMobile {
+        display: none;
+    }
+
+    .themeToggleDesktop {
+        display: block;
+        margin-bottom: -10px;
+    }
 
     .ctaBtnDesktop {
         display: inline-block;
@@ -318,12 +338,13 @@
         padding: 7px 16px;
 
         font-size: 15px;
+        font-weight: 600;
         white-space: nowrap;
 
         margin-bottom: -10px;
 
         background-color: var(--accent-color);
-        color: var(--text-color);
+        color: var(--text-2);
         border-radius: 8px;
 
         box-shadow:

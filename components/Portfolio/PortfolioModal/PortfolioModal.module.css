@@ -25,7 +25,7 @@
 
   overflow: hidden;
 
-  background: #fff;
+  background: var(--bg-2);
   border-radius: 16px;
 
   box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
@@ -48,7 +48,7 @@
   border-radius: 50%;
 
   background: rgba(46, 45, 45, 0.9);
-  color: #e4d6bc;
+  color: var(--text-2);
 
   font-size: 24px;
 
@@ -63,7 +63,7 @@
 
 .close:hover {
   background: #d8682e;
-  color: #fff;
+  color: var(--text-2);
   transform: rotate(90deg);
 }
 
@@ -86,19 +86,19 @@
   font-size: 1.6rem;
   line-height: 1.2;
 
-  color: #2f2f2f;
+  color: var(--text-1);
 }
 
 .subtitle {
   margin-bottom: 18px;
 
-  color: #777;
+  color: #9b5a32;
 
   font-size: 1rem;
 }
 
 .description {
-  color: #444;
+  color: var(--text-1);
   line-height: 1.8;
   font-size: 1rem;
 }
@@ -116,11 +116,11 @@
   font-size: 1.1rem;
   font-weight: 600;
 
-  color: #2f2f2f;
+  color: var(--text-1);
 }
 
 .sections p {
-  color: #444;
+  color: var(--text-1);
   line-height: 1.8;
   font-size: 1rem;
 }
@@ -135,12 +135,12 @@
 
 .contribution dt {
   font-weight: 600;
-  color: #6b5a47;
+  color: #9b5a32;
 }
 
 .contribution dd {
   margin: 0;
-  color: #3f3a35;
+  color: var(--text-1)
 }
 
 .reviews {
@@ -182,7 +182,7 @@
 
 .review time {
   font-size: 0.8rem;
-  color: #777;
+  color: #9b5a32;
 }
 
 /* ===========================
