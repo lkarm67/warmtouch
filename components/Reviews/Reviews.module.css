@@ -413,10 +413,6 @@
     padding: 72px 20px;
   }
 
-  .container {
-    width: min(100%, 1200px);
-  }
-
   .header {
     gap: 20px;
     margin-bottom: 36px;

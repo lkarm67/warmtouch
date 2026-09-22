@@ -20,7 +20,7 @@ function getNames(
   if (!ids?.length) return [];
 
   return ids
-    .map(id => source.find(item => item.id === id)?.name)
+    .map(id => source.find((item) => item.id === id)?.name)
     .filter((name): name is string => Boolean(name));
 }
 
@@ -71,7 +71,7 @@ export const getPurposeNames = (ids?: string[]) =>
 // ----------------------------------------------------
 
 export const getProjectTypeName = (id?: string) =>
-  PROJECT_TYPES.find(item => item.id === id)?.name;
+  PROJECT_TYPES.find((item) => item.id === id)?.name;
 
 // ----------------------------------------------------
 // Ролі майстра

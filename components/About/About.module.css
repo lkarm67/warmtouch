@@ -47,6 +47,8 @@
 .aboutContent {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 18px;
     width: 100%;
     padding: 0;
@@ -59,37 +61,6 @@
     font-weight: 700;
     text-align: center;
     color: var(--text-1);
-}
-
-/* =========================
-   DIVIDER
-========================= */
-
-.dividerContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(8px, 2vw, 12px);
-    width: 100%;
-}
-
-.divider {
-    width: clamp(50px, 18vw, 180px);
-    height: clamp(2px, 0.4vw, 4px);
-    flex-shrink: 1;
-    margin: 0;
-    background-color: var(--accent-color);
-    border: none;
-    box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.25),
-        0 0 20px rgba(255, 140, 0, 0.25);
-}
-
-.icon_fire {
-    width: clamp(20px, 4vw, 24px);
-    height: clamp(20px, 4vw, 24px);
-    flex-shrink: 0;
-    fill: var(--accent-color);
 }
 
 /* =========================
@@ -208,7 +179,6 @@
     gap: 12px;
     width: 100%;
     min-width: 0;
-    box-sizing: border-box;
     padding: 14px;
     background-color: var(--bg-3);
     border-radius: 8px;
@@ -271,7 +241,6 @@
 
     width: min(100%, 360px);
     min-width: 0;
-    box-sizing: border-box;
 
     gap: 10px;
     padding: 35px 25px;
@@ -297,7 +266,6 @@
 }
 
 .infoTrustReason,
-.qouteDividerContainer,
 .infoLogo {
     position: relative;
     z-index: 2;
@@ -336,26 +304,6 @@
 
     margin-left: 10px;
     vertical-align: -5px;
-}
-
-.qouteDividerContainer {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.qouteDivider {
-    width: 40px;
-    height: 1px;
-    margin: 0;
-    background-color: var(--text-2);
-    border: none;
-}
-
-.qouteIcon_fire {
-    width: 12px;
-    height: 12px;
-    fill: var(--text-2);
 }
 
 .infoLogo {
@@ -401,10 +349,6 @@
     .title {
         font-size: clamp(32px, 4vw, 36px);
         text-align: center;
-    }
-
-    .dividerContainer {
-        justify-content: center;
     }
 
     .description {
@@ -503,17 +447,15 @@
     }
 
     .aboutContent {
+        align-items: flex-start;
         padding: 20px 40px;
         gap: 20px;
+        justify-content: flex-start;
     }
 
     .title {
         font-size: 36px;
         text-align: left;
-    }
-
-    .dividerContainer {
-        justify-content: flex-start;
     }
 
     .description {

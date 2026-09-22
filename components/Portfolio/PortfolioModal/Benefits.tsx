@@ -9,7 +9,7 @@ export default function Benefits({ benefits }: Props) {
 
   return (
     <ul className={css.list}>
-      {benefits.map(item => (
+      {benefits.map((item) => (
         <li className={css.item} key={item}>
           <span className={css.icon}>✓</span>
           {item}

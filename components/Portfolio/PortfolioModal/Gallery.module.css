@@ -26,10 +26,6 @@
   transition: transform 250ms ease;
 }
 
-.mainImage:hover {
-  transform: scale(1.01);
-}
-
 .image {
   object-fit: contain;
 }
@@ -129,9 +125,7 @@
   border: 2px solid transparent;
 }
 
-.thumb:hover {
-  transform: scale(1.05);
-}
+
 
 .activeThumb {
   border: 2px solid #b86d2c;
@@ -180,4 +174,20 @@
     width: 76px;
     height: 76px;
   }
+}
+
+.mainImage:focus-visible,
+.thumb:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+@media (min-width: 1200px) and (hover: hover) and (pointer: fine) {
+    .mainImage:hover {
+        transform: scale(1.01);
+    }
+
+    .thumb:hover {
+        transform: scale(1.05);
+    }
 }

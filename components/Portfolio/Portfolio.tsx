@@ -11,6 +11,7 @@ import PortfolioModal from "./PortfolioModal/PortfolioModal";
 import Pagination from "./Pagination";
 
 import type { Work } from "@/types/portfolio.types";
+import SectionDivider from "../SectionDivider/SectionDivider";
 
 const ITEMS_PER_PAGE = 4;
 
@@ -57,17 +58,17 @@ export default function Portfolio() {
     // Повертаємо користувача до початку галереї
     const grid = document.querySelector(`.${css.grid}`);
 
-    if (grid) {
-      const top =
-        grid.getBoundingClientRect().top +
-        window.scrollY -
-        100;
+    if (!grid) return;
+
+    const top =
+      grid.getBoundingClientRect().top +
+      window.scrollY -
+      100;
 
       window.scrollTo({
         top,
         behavior: "smooth",
       });
-    }
   };
 
   /*
@@ -141,15 +142,7 @@ export default function Portfolio() {
     <div className={css.container}> 
       <h2 className={css.title}>Виконані роботи</h2>
 
-      <div className={css.dividerContainer}>
-        <hr className={css.divider} />
-
-        <svg className={css.icon_fire}>
-          <use href="/icons.svg#icon-fire" />
-        </svg>
-
-        <hr className={css.divider} />
-      </div>
+      <SectionDivider />
 
       <p className={css.description}>
         Від невеликого каміна до великої барбекю-зони —

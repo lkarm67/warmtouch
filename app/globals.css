@@ -36,14 +36,15 @@ h4,
 h5,
 h6,
 p {
-    margin: 0;
+  margin: 0;
 }
 
-a, 
+a,
 button {
   font-family: inherit;
   color: inherit;
 }
+
 /* Media */
 
 img,
@@ -87,36 +88,7 @@ button {
   background: none;
 }
 
-.ctaBtn {
-    background-color: var(--accent-color);
-    color: var(--text-2-color);
-    border: none;
-    border-radius: 8px;
-    padding: 8px 24px;
-    font-size: 16px;
-    font-weight: 500;
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background-color 0.25s ease,
-        border-color 0.25s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25),
-                0 0 20px rgba(255, 140, 0, 0.25);
-}
-
-.ctaBtn:hover,
-.ctaBtn:focus {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-    background-color: var(--accent-hover);
-} 
-
-/*root {
-  --bg-color: #2e2d2d;
-  --text-color: #e4d6bc;
-  --accent-color: #d8682e;
-  --accent-hover: #b45309;
-}*/
+/* Theme */
 
 :root {
   /* Backgrounds */
@@ -136,6 +108,9 @@ button {
   /* Spinner */
   --spinner-track: rgba(139, 74, 50, 0.2);
   --spinner-color: #8b4a32;
+
+  /* Font */
+  --font-family: "Inter", sans-serif;
 }
 
 [data-theme="dark"] {
@@ -151,11 +126,8 @@ button {
   --spinner-color: #d69a6f;
 }
 
-:root {
-    --font-family: "Inter", sans-serif;
-}
+/* Container */
 
-/* Styles for Mobile devices */
 .container {
   min-width: 320px;
   max-width: 375px;
@@ -163,14 +135,17 @@ button {
   padding: 0 0 0 20px;
 }
 
-/* Styles for Tablet devices */
+/* Tablet */
+
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 768px;
     padding: 0 0 0 32px;
   }
 }
-/* Styles for Desktop devices */
+
+/* Desktop */
+
 @media only screen and (min-width: 1024px) {
   .container {
     max-width: 1924px;

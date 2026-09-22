@@ -63,9 +63,6 @@
     padding: 0;
 
     background: transparent;
-    border: none;
-
-    cursor: pointer;
 }
 
 .burger span {
@@ -136,8 +133,6 @@
     align-items: center;
 
     gap: 22px;
-
-    list-style: none;
 }
 
 .navItem {

@@ -5,7 +5,7 @@ import Hero from "@/components/Hero/Hero";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import Reviews from "@/components/Reviews/Reviews";
 import Services from "@/components/Services/Services";
-import ContactForm from '@/components/ContactForm/ContactForm';
+import ContactForm from "@/components/ContactForm/ContactForm";
 import Footer from "@/components/Footer/Footer";
 
 

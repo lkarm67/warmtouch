@@ -4,12 +4,13 @@ import { useState } from 'react';
 
 import { faqData } from './faqData';
 import css from './FAQ.module.css';
+import SectionDivider from '../SectionDivider/SectionDivider';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const handleToggle = (index: number) => {
-    setOpenIndex(prev => (prev === index ? null : index));
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   return (
@@ -19,14 +20,7 @@ export default function FAQ() {
 
           <h2 className={css.title}>Часті запитання</h2>
 
-          <div className={css.dividerContainer}>
-            <hr className={css.divider} />
-              <svg className={css.icon_fire}>
-                <use href="/icons.svg#icon-fire" />
-              </svg>
-
-            <hr className={css.divider} />
-          </div>
+          <SectionDivider />
 
           <p className={css.description}>
             Відповіді на найпоширеніші запитання про будівництво,

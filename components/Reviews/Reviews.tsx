@@ -8,6 +8,7 @@ import {
 } from "react";
 import { works } from "../Portfolio/portfolioData";
 import css from "./Reviews.module.css";
+import SectionDivider from "../SectionDivider/SectionDivider";
 
 export default function Reviews() {
   const reviews = works.flatMap((work) =>
@@ -129,6 +130,14 @@ export default function Reviews() {
     };
   }, []);
 
+  const handleWorkClick = (slug: string) => {
+    const event = new CustomEvent("open-portfolio-work", {
+      detail: { slug },
+    });
+
+    window.dispatchEvent(event);
+  };
+
   /* ==================================================
      SLIDER
      ================================================== */
@@ -172,18 +181,7 @@ export default function Reviews() {
             Відгуки клієнтів
           </h2>
 
-          <div className={css.dividerContainer}>
-            <hr className={css.divider} />
-
-            <svg
-              className={css.icon_fire}
-              aria-hidden="true"
-            >
-              <use href="/icons.svg#icon-fire" />
-            </svg>
-
-            <hr className={css.divider} />
-          </div>
+          <SectionDivider />
 
           <p className={css.subtitle}>
             Дякую своїм клієнтам за довіру та щирі відгуки
@@ -304,18 +302,7 @@ export default function Reviews() {
                       <button
                         type="button"
                         className={css.workLink}
-                        onClick={() => {
-                          const event = new CustomEvent(
-                            "open-portfolio-work",
-                            {
-                              detail: {
-                                slug: review.workSlug,
-                              },
-                            },
-                          );
-
-                          window.dispatchEvent(event);
-                        }}
+                        onClick={() => handleWorkClick(review.workSlug)}
                       >
                         <strong>
                           {review.workTitle}

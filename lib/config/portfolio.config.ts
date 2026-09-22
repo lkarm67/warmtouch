@@ -43,12 +43,12 @@ export const FEATURES = [
     name: 'Міжкімнатна',
   },
   {
-    id: "air-heating",
-    name: "Повітряний обігрів",
+    id: 'air-heating',
+    name: 'Повітряний обігрів',
   },
   {
-    id: "multiroom-heating",
-    name: "Опалення кількох кімнат",
+    id: 'multiroom-heating',
+    name: 'Опалення кількох кімнат',
   },
   {
     id: 'cooktop',
@@ -130,41 +130,41 @@ export const FEATURES = [
 
 export const CAPABILITIES = [
   {
-  id: 'baking',
-  name: 'Випікання хліба, піци та випічки',
-},
-{
-  id: 'stewing',
-  name: 'Томління страв',
-},
-{
-  id: 'roasting',
-  name: 'Запікання м’яса та овочів',
-},
-{
-  id: 'drying',
-  name: 'Сушіння овочів, фруктів, грибів і трав',
-},
-{
-  id: 'smoking',
-  name: 'Копчення',
-},
-{
-  id: 'boiling',
-  name: 'Приготування на варильній плиті',
-},
-{
-  id: 'barbecue',
-  name: 'Приготування на решітці',
-},
-{
-  id: 'grilling',
-  name: 'Приготування на шампурах',
-},
-{
-  id: 'pizza',
-  name: 'Випікання піци',
-},
+    id: 'baking',
+    name: 'Випікання хліба, піци та випічки',
+  },
+  {
+    id: 'stewing',
+    name: 'Томління страв',
+  },
+  {
+    id: 'roasting',
+    name: 'Запікання м’яса та овочів',
+  },
+  {
+    id: 'drying',
+    name: 'Сушіння овочів, фруктів, грибів і трав',
+  }, 
+  {
+    id: 'smoking',
+    name: 'Копчення',
+  },
+  {
+    id: 'boiling',
+    name: 'Приготування на варильній плиті',
+  },
+  {
+    id: 'barbecue',
+    name: 'Приготування на решітці',
+  },
+  {
+    id: 'grilling',
+    name: 'Приготування на шампурах',
+  },
+  {
+    id: 'pizza',
+    name: 'Випікання піци',
+  },
 ] as const;
 
 

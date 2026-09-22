@@ -1,22 +1,30 @@
 const themeScript = `
-    (function () {
-        try {
-            var savedTheme = localStorage.getItem("theme");
-            var theme = savedTheme === "light" || savedTheme === "dark" || savedTheme === "system"
-            ? savedTheme
-             : "system";
+(function () {
+    try {
+        var savedTheme = localStorage.getItem("theme");
 
-            var isDark = theme === "dark";
+        var theme =
+            savedTheme === "light" ||
+            savedTheme === "dark" ||
+            savedTheme === "system"
+                ? savedTheme
+                : "system";
 
-            if (theme === "system") {
-                isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            }
+        var isDark = theme === "dark";
 
-            document.documentElement.dataset.theme = isDark ? "dark" : "light";
-        } catch (error) {
-            document.documentElement.dataset.theme = "light";
+        if (theme === "system") {
+            isDark = window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches;
         }
-    })();
+
+        document.documentElement.dataset.theme = isDark
+            ? "dark"
+            : "light";
+    } catch (error) {
+        document.documentElement.dataset.theme = "light";
+    }
+})();
 `;
 
 export default function ThemeScript() {

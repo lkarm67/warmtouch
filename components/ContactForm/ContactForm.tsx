@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import css from './ContactForm.module.css';
+import SectionDivider from '../SectionDivider/SectionDivider';
 
 const services = [
     'Піч',
@@ -168,15 +169,7 @@ export default function ContactForm() {
                         Залишити заявку
                     </h2>
 
-                    <div className={css.dividerContainer}>
-                        <hr className={css.divider} />
-
-                        <svg className={css.icon_fire}>
-                            <use href="/icons.svg#icon-fire"></use>
-                        </svg>
-
-                        <hr className={css.divider} />
-                    </div>
+                    <SectionDivider />
 
                     <p className={css.description}>
                         Опишіть ваше замовлення, і майстер зв'яжеться

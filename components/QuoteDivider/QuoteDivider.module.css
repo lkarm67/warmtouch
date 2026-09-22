@@ -1,0 +1,27 @@
+.quoteDividerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 360px;
+
+    gap: clamp(8px, 2vw, 12px);
+    z-index: 2;
+}
+
+.quoteDivider {
+    width: 40px;
+    height: 1px;
+    margin: 0;
+    background-color: var(--text-2);
+    border: none;
+}
+
+.quoteIcon_fire {
+    width: 12px;
+    height: 12px;
+    fill: var(--text-2);
+}

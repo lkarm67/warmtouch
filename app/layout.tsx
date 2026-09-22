@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import "./globals.css";
+
 import FireCursor from "@/components/Cursor/FireCursor";
 import ThemeScript from "@/components/Theme/ThemeScript";
 
@@ -23,7 +25,6 @@ export const metadata: Metadata = {
     siteName: "Теплий Дотик",
     locale: "uk_UA",
     type: "website",
-
     images: [
       {
         url: "https://res.cloudinary.com/dvrha1ntw/image/upload/v1789049004/og-image_f879vg.jpg",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  
+
   twitter: {
     card: "summary_large_image",
     title: "Теплий Дотик — печі, груби, каміни та барбекю",
@@ -45,18 +46,22 @@ export const metadata: Metadata = {
   },
 };
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk" data-scroll-behavior="smooth" className={inter.variable} suppressHydrationWarning>
+    <html
+      lang="uk"
+      data-scroll-behavior="smooth"
+      className={inter.variable}
+      suppressHydrationWarning
+    >
       <head>
         <ThemeScript />
       </head>
+
       <body>
         {children}
         <FireCursor />

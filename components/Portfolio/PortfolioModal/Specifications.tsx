@@ -30,7 +30,7 @@ export default function Specifications({
         </>
       )}
 
-      {specification.durationDays && (
+      {specification.durationDays !== undefined && (
         <>
           <dt className={css.term}>Термін робіт</dt>
           <dd className={css.value}>
@@ -39,7 +39,7 @@ export default function Specifications({
         </>
       )}
 
-      {specification.completedYear && (
+      {specification.completedYear !== undefined && (
         <>
           <dt className={css.term}>Рік</dt>
           <dd className={css.value}>

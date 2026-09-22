@@ -17,7 +17,7 @@ export default function InfoList({
           : css.list
       }
     >
-      {items.map(item => (
+      {items.map((item) => (
         <li
           key={item}
           className={

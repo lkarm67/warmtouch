@@ -34,6 +34,7 @@ export default function PortfolioModal({
   onClose,
 }: Props) {
   const contentRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const html = document.documentElement;
@@ -47,8 +48,7 @@ export default function PortfolioModal({
 
     html.style.overflow = 'hidden';
     body.style.overflow = 'hidden';
-
-    contentRef.current?.focus();
+    closeButtonRef.current?.focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (!contentRef.current) return;
@@ -115,6 +115,7 @@ export default function PortfolioModal({
         onClick={(e) => e.stopPropagation()}
       >
         <button
+          ref={closeButtonRef}
           type="button"
           className={css.close}
           onClick={onClose}

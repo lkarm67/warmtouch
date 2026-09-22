@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import css from './Services.module.css';
 import { servicesData, type Service } from './servicesData';
+import SectionDivider from '../SectionDivider/SectionDivider';
  
 export default function Services() {
   const [activeService, setActiveService] = useState<Service | null>(null);
@@ -42,13 +43,7 @@ export default function Services() {
     <div className={css.container}>
       <h2 className={css.title}>Послуги</h2>
  
-      <div className={css.dividerContainer}>
-        <hr className={css.divider} />
-        <svg className={css.icon_fire}>
-          <use href="/icons.svg#icon-fire"></use>
-        </svg>
-        <hr className={css.divider} />
-      </div>
+      <SectionDivider />
  
       <div className={css.servicesList}>
         {servicesData.map((service) => (

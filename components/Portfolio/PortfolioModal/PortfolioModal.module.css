@@ -57,14 +57,8 @@
   z-index: 20;
 
   transition:
-    transform .25s ease,
+    transform .25s ease, 
     background .25s ease;
-}
-
-.close:hover {
-  background: #d8682e;
-  color: var(--text-2);
-  transform: rotate(90deg);
 }
 
 .left {
@@ -266,3 +260,11 @@
   }
 }
 
+@media (min-width: 1200px) and (hover: hover) and (pointer: fine) {
+    .close:hover,
+    .close:focus-visible {
+        background: #d8682e;
+        color: var(--text-2);
+        transform: rotate(90deg);
+    }
+}
