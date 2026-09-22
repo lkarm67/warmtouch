@@ -26,7 +26,7 @@ export default function Header() {
             </Link>
             
             {/* THEME TOGGLE — MOBILE */}
-            {/*<div className={css.themeToggleMobile}>
+            <div className={css.themeToggleMobile}>
                 <ThemeToggle />
             </div>
 
@@ -132,7 +132,7 @@ export default function Header() {
             </nav>
 
             {/* THEME TOGGLE — DESKTOP */}
-            {/*<div className={css.themeToggleDesktop}>
+            <div className={css.themeToggleDesktop}>
                 <ThemeToggle />
             </div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import FireCursor from "@/components/Cursor/FireCursor";
+import ThemeScript from "@/components/Theme/ThemeScript";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -52,7 +53,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk" data-scroll-behavior="smooth" className={inter.variable}>
+    <html lang="uk" data-scroll-behavior="smooth" className={inter.variable} suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
       <body>
         {children}
         <FireCursor />
