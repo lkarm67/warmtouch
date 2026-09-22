@@ -122,6 +122,11 @@
         0 20px 50px rgba(0, 0, 0, 0.55);
 }
 
+[data-theme="dark"] .form {
+    background-color: #463d34;
+    border-color: rgba(228, 214, 188, 0.15);
+}
+
 .field {
     display: flex;
     flex-direction: column;
@@ -207,6 +212,27 @@
 .textareaIcon {
     top: 16px;
     transform: none;
+}
+
+[data-theme="dark"] .field input,
+[data-theme="dark"] .field select,
+[data-theme="dark"] .field textarea {
+    background-color: #38312b;
+    color: #e4d6bc;
+    border-color: #66594b;
+}
+
+[data-theme="dark"] .field label {
+    color: #e4d6bc;
+}
+
+[data-theme="dark"] .field input::placeholder,
+[data-theme="dark"] .field textarea::placeholder {
+    color: #b8aa96;
+}
+
+[data-theme="dark"] .inputIcon {
+    fill: #b8aa96;
 }
 
 /* Помилка валідації */
@@ -369,6 +395,44 @@
     background-color: #a0523b;
 
     transform: translate(-50%, -50%);
+}
+
+/* Dark theme — Месенджер */
+
+[data-theme="dark"] .messengerField legend {
+    color: #e8ddd0;
+}
+
+[data-theme="dark"] .messengerField legend span {
+    color: #d47a5f;
+}
+
+[data-theme="dark"] .messengerOption {
+    border-color: #5a4d42;
+    background-color: #2a2521;
+    color: #e8ddd0;
+}
+
+[data-theme="dark"] .messengerOption:hover {
+    border-color: #8f6655;
+    background-color: #312a25;
+}
+
+[data-theme="dark"] .radioCircle {
+    border-color: #8f8276;
+}
+
+[data-theme="dark"] .messengerOption:has(input:checked) {
+    border-color: #c06b52;
+    background-color: #332a25;
+}
+
+[data-theme="dark"] .messengerOption:has(input:checked) .radioCircle {
+    border-color: #c06b52;
+}
+
+[data-theme="dark"] .messengerOption:has(input:checked) .radioCircle::after {
+    background-color: #c06b52;
 }
 
 .messengerError .messengerOption {
@@ -569,6 +633,27 @@
     font-weight: 400;
 }
 
+[data-theme="dark"] .contactButton {
+    border-color: rgba(192, 107, 82, 0.3);
+
+    background-color: rgba(48, 41, 36, 0.8);
+    color: #e8ddd0;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .contactButton:hover {
+    border-color: rgba(192, 107, 82, 0.6);
+
+    background-color: rgba(58, 49, 43, 0.9);
+
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .contactButtonSubtitle {
+    color: #b8aa9c;
+}
+
 .afterContactButtonBox {
     display: flex;
     align-items: flex-start;
@@ -622,6 +707,10 @@
     .section::after {
         display: block;
     }
+}
+
+[data-theme="dark"] .section::after {
+    display: none;
 }
 
 /* ========================================

@@ -32,3 +32,8 @@
 
     opacity: 0.5;
 }
+
+[data-theme="dark"] .bottom p {
+    color: #e8ddd0;
+    opacity: 0.65;
+}

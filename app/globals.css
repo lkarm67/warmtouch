@@ -132,6 +132,10 @@ button {
   /* Accent */
   --accent-color: #d8682e;
   --accent-hover: #b45309;
+
+  /* Spinner */
+  --spinner-track: rgba(139, 74, 50, 0.2);
+  --spinner-color: #8b4a32;
 }
 
 [data-theme="dark"] {
@@ -141,6 +145,10 @@ button {
 
   /* Text */
   --text-1: #e4d6bc;
+
+  /* Spinner */
+  --spinner-track: rgba(214, 154, 111, 0.2);
+  --spinner-color: #d69a6f;
 }
 
 :root {
