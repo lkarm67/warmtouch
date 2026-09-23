@@ -263,6 +263,10 @@ LinkedIn: [Liudmyla Karmeliuk](https://www.linkedin.com/in/liudmyla-karmeliuk-fu
 
 ```
 
-### 📄 License
+## 📄 License
 
-This project was developed as a commercial website for a real business.
+The source code of this project is licensed under the [MIT License](./LICENSE).
+
+The MIT License applies to the source code and software components of this project. It does not grant permission to use, reproduce, or distribute the website's photographs, logo, brand identity, text content, or other original visual and editorial materials unless otherwise stated.
+
+© 2026 Liudmyla Karmeliuk. All rights reserved for the original content and visual materials.
