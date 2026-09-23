@@ -263,7 +263,7 @@ LinkedIn: [Liudmyla Karmeliuk](https://www.linkedin.com/in/liudmyla-karmeliuk-fu
 
 ```
 
-## 📄 License
+📄 License
 
 The source code of this project is licensed under the [MIT License](./LICENSE).
 
